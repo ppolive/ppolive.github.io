@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>孙洪涛 | 资深产品经理 Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #111;
+            --card-bg: #1e1e1e;
+            --text-primary: #e0e0e0;
+            --text-secondary: #a0a0a0;
+            --accent-color: #64ffda; /* 青色高亮，类似极客风格 */
+            --timeline-line: #333;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        a { text-decoration: none; color: var(--accent-color); transition: 0.3s; }
+        a:hover { opacity: 0.8; }
+
+        /* Header Section */
+        header {
+            padding: 60px 0 40px;
+            border-bottom: 1px solid var(--timeline-line);
+        }
+        
+        h1 { font-size: 2.5rem; margin-bottom: 10px; color: #fff; }
+        .subtitle { font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 20px; }
+        .tagline { 
+            background: rgba(100, 255, 218, 0.1); 
+            color: var(--accent-color); 
+            padding: 5px 10px; 
+            border-radius: 4px; 
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .contact-links a {
+            margin-right: 20px;
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+        }
+        .contact-links a:hover { color: var(--accent-color); }
+
+        /* Section Styling */
+        section { padding: 40px 0; border-bottom: 1px solid #222; }
+        h2 { font-size: 1.5rem; margin-bottom: 30px; display: flex; align-items: center; }
+        h2::before {
+            content: '#';
+            color: var(--accent-color);
+            margin-right: 10px;
+        }
+
+        /* Experience Timeline */
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 40px;
+            border-left: 2px solid var(--timeline-line);
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            background: var(--accent-color);
+            border-radius: 50%;
+        }
+        .job-title { font-weight: bold; font-size: 1.1rem; color: #fff; }
+        .company { color: var(--accent-color); font-weight: 500; margin: 5px 0; }
+        .period { font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 10px; display: block; }
+        .job-desc { font-size: 0.95rem; color: var(--text-secondary); }
+
+        /* Project Cards */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .project-card {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 8px;
+            transition: transform 0.2s;
+            border: 1px solid #333;
+        }
+        .project-card:hover { transform: translateY(-5px); border-color: var(--accent-color); }
+        .project-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px; }
+        .project-title { font-weight: bold; color: #fff; }
+        .project-links a { font-size: 1.2rem; }
+        .tech-stack { margin-top: 15px; display: flex; flex-wrap: wrap; gap: 8px; }
+        .tech-tag {
+            font-size: 0.75rem;
+            background: #333;
+            color: var(--text-secondary);
+            padding: 3px 8px;
+            border-radius: 4px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            .contact-links a { margin-right: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>孙洪涛</h1>
+        <p class="subtitle">资深产品经理 | 10年+ 经验 | 医疗数字化 & 区块链专家</p>
+        <div class="tagline">擅长复杂业务抽象 · 平台从0到1 · 商业化闭环</div>
+        
+        <div class="contact-links">
+            <a href="mailto:86628180@qq.com" title="Email"><i class="fas fa-envelope"></i></a>
+            <a href="tel:13311505223" title="Phone"><i class="fas fa-phone"></i></a>
+            <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+    </header>
+
+    <section id="about">
+        <h2>关于我</h2>
+        <p style="color: var(--text-secondary);">
+            拥有超过10年的产品管理经验，深耕医疗数字化、区块链及游戏行业。擅长平台型产品从 0 到 1 的规划与落地，具备极强的跨团队协同与资源整合能力。
+            <br><br>
+            在<b>医声医事</b>任职期间，成功构建了B2B2D闭环体系，推动了数字营销与数据资产化的商业化落地。对复杂业务场景的抽象与规划有独到见解，致力于通过技术驱动业务增长。
+        </p>
+    </section>
+
+    <section id="experience">
+        <h2>工作经历</h2>
+
+        <div class="timeline-item">
+            <div class="job-title">商业化产品经理</div>
+            <div class="company">医声医事(北京)科技有限公司</div>
+            <span class="period">2020 - 至今</span>
+            <div class="job-desc">
+                负责商业化产品规划（数字营销、数据资产化）。搭建学术直播、企业营销专区等模块，累计支持2000+场活动。主导符合欧盟EUDI标准的数字身份系统及慢病管理平台建设。
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="job-title">高级产品经理</div>
+            <div class="company">原始空气(北京)科技有限公司</div>
+            <span class="period">2018 - 2019</span>
+            <div class="job-desc">
+                从0到1搭建合规数字资产交易平台。设计美股合约、锁仓分红等核心功能。支持63个项目上线，日交易额峰值达63.74亿元，推动平台进入行业TOP3。
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="job-title">产品经理</div>
+            <div class="company">上海绿岸科技 (北京分公司)</div>
+            <span class="period">2015 - 2017</span>
+            <div class="job-desc">
+                规划游戏运营平台及数据监控工具。通过数据分析优化用户留存路径，留存率提升13%，首充转化率达21%。
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="job-title">联合创始人 / 产品负责人</div>
+            <div class="company">聚爱玩网络科技</div>
+            <span class="period">2013 - 2015</span>
+            <div class="job-desc">
+                统筹CMS、GM工具及用户体系搭建。推动4款产品同步上线双端，建立早期研发协同机制。
+            </div>
+        </div>
+        
+        <div class="timeline-item">
+            <div class="job-title">产品经理</div>
+            <div class="company">北京金山软件</div>
+            <span class="period">2008 - 2013</span>
+            <div class="job-desc">
+                主导首个页游平台全流程，无预算情况下首月营收26万。设计《剑侠日报》实现60%用户打开率。
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>精选项目</h2>
+        <div class="project-grid">
+            
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-title">学术助理 App</div>
+                    <div class="project-links">
+                        <a href="https://app.mockplus.cn/p/yUQcVdORk" target="_blank" title="查看原型"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <p class="job-desc">基于347万+实名医生数据，构建集精准检索、虚拟拜访于一体的客情管理平台。服务默克、拜耳等药企，覆盖300+代表。</p>
+                <div class="tech-stack">
+                    <span class="tech-tag">数字化营销</span>
+                    <span class="tech-tag">CRM</span>
+                    <span class="tech-tag">合规监管</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-title">数字资产银行</div>
+                    <div class="project-links">
+                        <a href="https://app.mockplus.cn/p/x4TOVjTyh" target="_blank" title="查看原型"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <p class="job-desc">基于“区块链+隐私计算”构建医疗数据确权与流通底座。已构建符合欧盟EUDI标准的数字身份系统，孵化“菌群银行”等应用。</p>
+                <div class="tech-stack">
+                    <span class="tech-tag">区块链</span>
+                    <span class="tech-tag">数据要素</span>
+                    <span class="tech-tag">EUDI标准</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-title">司南数据分析平台</div>
+                    <div class="project-links">
+                        <a href="https://app.mockplus.cn/p/kGgFJfXUc0F" target="_blank" title="查看原型"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <p class="job-desc">可视化数据中台，打造“埋点-分析-画像-大屏”闭环。支持多维度医生画像与自动计算，提升策略制定效率。</p>
+                <div class="tech-stack">
+                    <span class="tech-tag">数据可视化</span>
+                    <span class="tech-tag">用户画像</span>
+                    <span class="tech-tag">BI</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-title">慢病管理平台</div>
+                    <div class="project-links">
+                        <a href="https://app.mockplus.cn/p/gqOmQ0wWXd" target="_blank" title="查看原型"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <p class="job-desc">支撑真实世界数据采集，规划慢病、儿童健康等产品线。县域慢病方案获国家卫健委立项。</p>
+                <div class="tech-stack">
+                    <span class="tech-tag">互联网医院</span>
+                    <span class="tech-tag">慢病管理</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="education" style="border-bottom: none;">
+        <h2>教育背景</h2>
+        <div class="timeline-item" style="border-left: none; padding-left: 0;">
+            <div class="job-title">工商管理 (MBA) / 硕士</div>
+            <div class="company">黑龙江科技大学</div>
+            <span class="period">2021 - 2024</span>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Sun Hongtao. Built with simple code.</p>
+    </footer>
+
+</body>
+</html>
