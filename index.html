@@ -1,286 +1,1059 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>孙洪涛 | 资深产品经理 Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        :root {
-            --bg-color: #111;
-            --card-bg: #1e1e1e;
-            --text-primary: #e0e0e0;
-            --text-secondary: #a0a0a0;
-            --accent-color: #64ffda; /* 青色高亮，类似极客风格 */
-            --timeline-line: #333;
-        }
+  <meta charset="UTF-8" />
+  <title>孙洪涛 · Platform Product Manager</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="孙洪涛 · 平台型产品经理 / 数据与数字化创新 · 个人作品集" />
+  <style>
+    :root {
+      --bg: #060711;
+      --bg-alt: #0f101b;
+      --card: #141521;
+      --accent: #4ea9ff;
+      --accent-soft: rgba(78,169,255,0.08);
+      --text-main: #f5f5f7;
+      --text-sub: #a0a3b1;
+      --border-subtle: #27293a;
+      --radius-lg: 18px;
+      --radius-xl: 24px;
+      --shadow-soft: 0 18px 45px rgba(0,0,0,0.5);
+    }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        body {
-            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-primary);
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, -sans-serif;
+      background: radial-gradient(circle at top, #15172a 0, #050610 55%, #020308 100%);
+      color: var(--text-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
 
-        a { text-decoration: none; color: var(--accent-color); transition: 0.3s; }
-        a:hover { opacity: 0.8; }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
 
-        /* Header Section */
-        header {
-            padding: 60px 0 40px;
-            border-bottom: 1px solid var(--timeline-line);
-        }
-        
-        h1 { font-size: 2.5rem; margin-bottom: 10px; color: #fff; }
-        .subtitle { font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 20px; }
-        .tagline { 
-            background: rgba(100, 255, 218, 0.1); 
-            color: var(--accent-color); 
-            padding: 5px 10px; 
-            border-radius: 4px; 
-            font-size: 0.9rem;
-            display: inline-block;
-            margin-bottom: 20px;
-        }
+    a:hover {
+      text-decoration: underline;
+    }
 
-        .contact-links a {
-            margin-right: 20px;
-            font-size: 1.2rem;
-            color: var(--text-secondary);
-        }
-        .contact-links a:hover { color: var(--accent-color); }
+    /* Layout */
+    .page {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 24px 16px 64px;
+    }
 
-        /* Section Styling */
-        section { padding: 40px 0; border-bottom: 1px solid #222; }
-        h2 { font-size: 1.5rem; margin-bottom: 30px; display: flex; align-items: center; }
-        h2::before {
-            content: '#';
-            color: var(--accent-color);
-            margin-right: 10px;
-        }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(16px);
+      background: linear-gradient(to bottom, rgba(5,6,16,0.92), rgba(5,6,16,0.6), transparent);
+      padding: 10px 0 14px;
+    }
 
-        /* Experience Timeline */
-        .timeline-item {
-            position: relative;
-            padding-left: 30px;
-            margin-bottom: 40px;
-            border-left: 2px solid var(--timeline-line);
-        }
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -6px;
-            top: 5px;
-            width: 10px;
-            height: 10px;
-            background: var(--accent-color);
-            border-radius: 50%;
-        }
-        .job-title { font-weight: bold; font-size: 1.1rem; color: #fff; }
-        .company { color: var(--accent-color); font-weight: 500; margin: 5px 0; }
-        .period { font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 10px; display: block; }
-        .job-desc { font-size: 0.95rem; color: var(--text-secondary); }
+    .nav-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
 
-        /* Project Cards */
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-        .project-card {
-            background: var(--card-bg);
-            padding: 20px;
-            border-radius: 8px;
-            transition: transform 0.2s;
-            border: 1px solid #333;
-        }
-        .project-card:hover { transform: translateY(-5px); border-color: var(--accent-color); }
-        .project-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px; }
-        .project-title { font-weight: bold; color: #fff; }
-        .project-links a { font-size: 1.2rem; }
-        .tech-stack { margin-top: 15px; display: flex; flex-wrap: wrap; gap: 8px; }
-        .tech-tag {
-            font-size: 0.75rem;
-            background: #333;
-            color: var(--text-secondary);
-            padding: 3px 8px;
-            border-radius: 4px;
-        }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
 
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 40px 0;
-            color: #555;
-            font-size: 0.9rem;
-        }
+    .logo-mark {
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 0%, #6be4ff, #4ea9ff 40%, #1a4a88 100%);
+      box-shadow: 0 0 0 1px rgba(255,255,255,0.12), 0 12px 30px rgba(0,0,0,0.6);
+      position: relative;
+    }
 
-        /* Responsive */
-        @media (max-width: 600px) {
-            h1 { font-size: 2rem; }
-            .contact-links a { margin-right: 15px; }
-        }
-    </style>
+    .logo-mark::after {
+      content: "";
+      position: absolute;
+      inset: 7px;
+      border-radius: inherit;
+      background: radial-gradient(circle at 30% 0%, rgba(255,255,255,0.9), transparent);
+      opacity: 0.6;
+    }
+
+    .logo-text-main {
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+
+    .logo-text-sub {
+      font-size: 11px;
+      color: var(--text-sub);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 20px;
+      font-size: 13px;
+    }
+
+    .nav-links a {
+      color: var(--text-sub);
+      text-decoration: none;
+      position: relative;
+      padding-bottom: 2px;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 1px;
+      width: 0;
+      background: var(--accent);
+      transition: width 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--text-main);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    main {
+      margin-top: 18px;
+    }
+
+    section {
+      margin-top: 40px;
+    }
+
+    .section-title {
+      font-size: 18px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .section-title span {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--text-sub);
+    }
+
+    .section-title::before {
+      content: "";
+      width: 20px;
+      height: 1px;
+      background: linear-gradient(to right, var(--accent), transparent);
+      opacity: 0.7;
+    }
+
+    /* Hero */
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.2fr);
+      gap: 22px;
+      margin-top: 18px;
+    }
+
+    .hero-main {
+      background: radial-gradient(circle at top left, rgba(78,169,255,0.18), transparent 60%), var(--bg-alt);
+      border-radius: var(--radius-xl);
+      padding: 26px 24px;
+      border: 1px solid rgba(255,255,255,0.02);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 3px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.06);
+      background: rgba(14,22,36,0.9);
+      font-size: 11px;
+      color: var(--text-sub);
+      margin-bottom: 14px;
+    }
+
+    .hero-tag-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 0%, #adffb2, #2dd37c);
+      box-shadow: 0 0 10px rgba(45,211,124,0.9);
+    }
+
+    .hero-title {
+      font-size: 28px;
+      font-weight: 650;
+      margin-bottom: 10px;
+    }
+
+    .hero-subtitle {
+      font-size: 14px;
+      color: var(--text-sub);
+      max-width: 480px;
+      margin-bottom: 18px;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 16px;
+      font-size: 12px;
+      color: var(--text-sub);
+      margin-bottom: 20px;
+    }
+
+    .hero-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .hero-meta-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.5);
+      opacity: 0.7;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .btn {
+      font-size: 13px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: none;
+      color: var(--text-main);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #4ea9ff, #6be4ff);
+      color: #050711;
+      font-weight: 500;
+      box-shadow: 0 12px 30px rgba(78,169,255,0.45);
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 18px 40px rgba(78,169,255,0.6);
+      transform: translateY(-1px);
+    }
+
+    .btn-ghost {
+      border-color: rgba(255,255,255,0.12);
+      color: var(--text-sub);
+      background: rgba(9,11,22,0.85);
+    }
+
+    .btn-ghost:hover {
+      border-color: rgba(255,255,255,0.3);
+      color: var(--text-main);
+    }
+
+    .hero-side {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .hero-card {
+      background: rgba(10,11,22,0.96);
+      border-radius: var(--radius-lg);
+      padding: 14px 14px 12px;
+      border: 1px solid var(--border-subtle);
+    }
+
+    .hero-card-title {
+      font-size: 13px;
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    .hero-card-sub {
+      font-size: 12px;
+      color: var(--text-sub);
+      margin-bottom: 6px;
+    }
+
+    .hero-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 4px;
+    }
+
+    .pill {
+      font-size: 11px;
+      padding: 3px 9px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.06);
+      color: var(--text-sub);
+      background: rgba(12,13,25,0.96);
+    }
+
+    .metric-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      font-size: 11px;
+      color: var(--text-sub);
+      margin-top: 6px;
+    }
+
+    .metric-label {
+      opacity: 0.8;
+    }
+
+    .metric-value {
+      color: #e2e4ff;
+    }
+
+    /* About & Experience */
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--bg-alt);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-subtle);
+      padding: 16px 16px 14px;
+    }
+
+    .card p {
+      font-size: 13px;
+      color: var(--text-sub);
+    }
+
+    .experience-item {
+      margin-bottom: 12px;
+    }
+
+    .exp-title {
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .exp-meta {
+      font-size: 11px;
+      color: var(--text-sub);
+      margin-bottom: 4px;
+    }
+
+    .exp-desc {
+      font-size: 12px;
+      color: var(--text-sub);
+    }
+
+    .exp-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 6px;
+    }
+
+    .exp-tag {
+      font-size: 10px;
+      padding: 2px 7px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.06);
+      color: var(--text-sub);
+    }
+
+    /* Projects */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .project-card {
+      background: var(--card);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-subtle);
+      padding: 14px 14px 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .project-title-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      align-items: center;
+      margin-bottom: 4px;
+    }
+
+    .project-title {
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .project-badge {
+      font-size: 10px;
+      padding: 2px 7px;
+      border-radius: 999px;
+      background: rgba(78,169,255,0.08);
+      border: 1px solid rgba(78,169,255,0.4);
+      color: #c4e2ff;
+    }
+
+    .project-role {
+      font-size: 11px;
+      color: var(--text-sub);
+      margin-bottom: 5px;
+    }
+
+    .project-desc {
+      font-size: 12px;
+      color: var(--text-sub);
+      margin-bottom: 8px;
+    }
+
+    .project-meta {
+      font-size: 11px;
+      color: var(--text-sub);
+      margin-bottom: 6px;
+    }
+
+    .project-links {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11px;
+      margin-top: 6px;
+    }
+
+    .project-links a {
+      text-decoration: none;
+    }
+
+    .project-pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: 4px;
+    }
+
+    .project-pill {
+      font-size: 10px;
+      padding: 2px 6px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.06);
+      color: var(--text-sub);
+    }
+
+    /* Skills */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .skills-card-title {
+      font-size: 12px;
+      font-weight: 500;
+      margin-bottom: 6px;
+    }
+
+    .skills-list {
+      list-style: none;
+      font-size: 12px;
+      color: var(--text-sub);
+    }
+
+    .skills-list li {
+      margin-bottom: 3px;
+    }
+
+    /* Timeline */
+    .timeline {
+      border-left: 1px solid rgba(255,255,255,0.08);
+      padding-left: 12px;
+      margin-left: 4px;
+    }
+
+    .timeline-item {
+      margin-bottom: 10px;
+      position: relative;
+      padding-left: 8px;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -13px;
+      top: 5px;
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 0 3px rgba(78,169,255,0.25);
+    }
+
+    .timeline-year {
+      font-size: 11px;
+      color: var(--text-sub);
+    }
+
+    .timeline-text {
+      font-size: 12px;
+    }
+
+    /* Contact */
+    .contact-card {
+      display: grid;
+      grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+      gap: 18px;
+      align-items: center;
+    }
+
+    .contact-main p {
+      font-size: 13px;
+      color: var(--text-sub);
+      margin-bottom: 10px;
+    }
+
+    .contact-meta {
+      font-size: 12px;
+      color: var(--text-sub);
+    }
+
+    .contact-label {
+      font-size: 11px;
+      color: var(--text-sub);
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      margin-bottom: 4px;
+    }
+
+    .contact-value {
+      font-size: 13px;
+    }
+
+    footer {
+      margin-top: 32px;
+      font-size: 11px;
+      color: #666a7a;
+      text-align: center;
+    }
+
+    /* Responsive */
+    @media (max-width: 860px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .hero-main {
+        order: 1;
+      }
+      .hero-side {
+        order: 2;
+      }
+      .about-grid,
+      .projects-grid,
+      .skills-grid,
+      .contact-card {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      header {
+        padding-top: 8px;
+      }
+      .nav-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .section-title {
+        margin-top: 8px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-title {
+        font-size: 22px;
+      }
+
+      .hero-main {
+        padding: 20px 16px;
+      }
+
+      .page {
+        padding-inline: 14px;
+      }
+    }
+  </style>
 </head>
 <body>
+<header>
+  <div class="nav-inner">
+    <div class="logo">
+      <div class="logo-mark"></div>
+      <div>
+        <div class="logo-text-main">SUN HONGTAO</div>
+        <div class="logo-text-sub">PLATFORM PRODUCT · DATA</div>
+      </div>
+    </div>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
 
-    <header>
-        <h1>孙洪涛</h1>
-        <p class="subtitle">资深产品经理 | 10年+ 经验 | 医疗数字化 & 区块链专家</p>
-        <div class="tagline">擅长复杂业务抽象 · 平台从0到1 · 商业化闭环</div>
-        
-        <div class="contact-links">
-            <a href="mailto:86628180@qq.com" title="Email"><i class="fas fa-envelope"></i></a>
-            <a href="tel:13311505223" title="Phone"><i class="fas fa-phone"></i></a>
-            <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+<div class="page">
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <div class="hero-main">
+        <div class="hero-tag">
+          <span class="hero-tag-dot"></span>
+          <span>Platform Product Manager · Data & Digital Innovation</span>
         </div>
-    </header>
-
-    <section id="about">
-        <h2>关于我</h2>
-        <p style="color: var(--text-secondary);">
-            拥有超过10年的产品管理经验，深耕医疗数字化、区块链及游戏行业。擅长平台型产品从 0 到 1 的规划与落地，具备极强的跨团队协同与资源整合能力。
-            <br><br>
-            在<b>医声医事</b>任职期间，成功构建了B2B2D闭环体系，推动了数字营销与数据资产化的商业化落地。对复杂业务场景的抽象与规划有独到见解，致力于通过技术驱动业务增长。
+        <h1 class="hero-title">孙洪涛 · Platform Product & Data Product Manager</h1>
+        <p class="hero-subtitle">
+          10+ 年产品经验，专注平台型产品规划、数据驱动决策与商业化增长。
+          先后在医疗数字化、数据资产银行、数字营销与交易平台等领域从 0 到 1
+          落地多款复杂系统产品。
         </p>
+        <div class="hero-meta">
+          <span><span class="hero-meta-dot"></span> Beijing / Open to remote</span>
+          <span><span class="hero-meta-dot"></span> Product Strategy · Data Platform · Commercialization</span>
+        </div>
+        <div class="hero-actions">
+          <!-- 替换为你的简历 PDF 路径，例如 ./cv.pdf -->
+          <a class="btn btn-primary" href="#" target="_blank" rel="noopener">
+            下载简历（CN）
+          </a>
+          <a class="btn btn-ghost" href="#projects">
+            查看核心项目
+          </a>
+        </div>
+      </div>
+
+      <aside class="hero-side">
+        <div class="hero-card">
+          <div class="hero-card-title">个人概览 / Snapshot</div>
+          <div class="hero-card-sub">快速了解我的背景与价值主张。</div>
+          <div class="metric-row">
+            <div class="metric-label">产品经验</div>
+            <div class="metric-value">10+ 年</div>
+          </div>
+          <div class="metric-row">
+            <div class="metric-label">领域</div>
+            <div class="metric-value">医疗数字化 · 数据资产 · 交易平台 · 游戏</div>
+          </div>
+          <div class="metric-row">
+            <div class="metric-label">角色</div>
+            <div class="metric-value">商业化产品 / 平台产品 / 高级产品经理</div>
+          </div>
+          <div class="hero-pills" style="margin-top:8px;">
+            <span class="pill">平台体系规划</span>
+            <span class="pill">数据驱动决策</span>
+            <span class="pill">跨团队协同</span>
+            <span class="pill">从 0 到 1</span>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="hero-card-title">当前关注 / What I'm focusing on</div>
+          <div class="hero-card-sub">希望在以下方向继续深耕与落地。</div>
+          <div class="hero-pills">
+            <span class="pill">数据中台 & BI</span>
+            <span class="pill">数字身份 & 数据要素</span>
+            <span class="pill">B2B2X 平台</span>
+            <span class="pill">AIGC & 增长工具链</span>
+          </div>
+        </div>
+      </aside>
     </section>
 
-    <section id="experience">
-        <h2>工作经历</h2>
-
-        <div class="timeline-item">
-            <div class="job-title">商业化产品经理</div>
-            <div class="company">医声医事(北京)科技有限公司</div>
-            <span class="period">2020 - 至今</span>
-            <div class="job-desc">
-                负责商业化产品规划（数字营销、数据资产化）。搭建学术直播、企业营销专区等模块，累计支持2000+场活动。主导符合欧盟EUDI标准的数字身份系统及慢病管理平台建设。
-            </div>
+    <!-- About & Experience -->
+    <section id="about">
+      <h2 class="section-title"><span>About</span>关于我</h2>
+      <div class="about-grid">
+        <div class="card">
+          <p>
+            我是一名平台型产品经理，擅长在复杂业务场景下抽象产品结构，
+            规划多角色、多端协同的产品体系，并用数据闭环推动持续增长。
+            过往经历横跨医疗数字化、数据资产银行、数字营销、区块链与游戏行业，
+            熟悉 B 端、平台及增长场景。<br><br>
+            面对不确定的业务目标，我习惯先搭建「问题地图」与「系统模型」，
+            再拆解为可执行的产品路线图和迭代节奏：从愿景、架构到指标，
+            以产品语言把业务目标变成团队可以共识的方向。
+          </p>
         </div>
-
-        <div class="timeline-item">
-            <div class="job-title">高级产品经理</div>
-            <div class="company">原始空气(北京)科技有限公司</div>
-            <span class="period">2018 - 2019</span>
-            <div class="job-desc">
-                从0到1搭建合规数字资产交易平台。设计美股合约、锁仓分红等核心功能。支持63个项目上线，日交易额峰值达63.74亿元，推动平台进入行业TOP3。
+        <div class="card" id="experience">
+          <div class="experience-item">
+            <div class="exp-title">商业化 / 平台产品经理 · 医声医事（北京）科技有限公司</div>
+            <div class="exp-meta">2020 - 至今 · 医疗数字化服务与数据资产化平台</div>
+            <div class="exp-desc">
+              负责商业化产品体系与创新方向：搭建学术活动、企业专区、电销平台、
+              医生画像与数据中台、慢病管理与数字资产银行等一系列产品，支撑医生服务与数据要素业务升级。 [oai_citation:1‡孙洪涛-商业化产品经理-10年经验13311505223.pdf](file-service://file-BHTCYa8K4NGJvEszekpRPP)
             </div>
-        </div>
-
-        <div class="timeline-item">
-            <div class="job-title">产品经理</div>
-            <div class="company">上海绿岸科技 (北京分公司)</div>
-            <span class="period">2015 - 2017</span>
-            <div class="job-desc">
-                规划游戏运营平台及数据监控工具。通过数据分析优化用户留存路径，留存率提升13%，首充转化率达21%。
+            <div class="exp-tags">
+              <span class="exp-tag">商业化产品</span>
+              <span class="exp-tag">B2B2D 平台</span>
+              <span class="exp-tag">数据资产</span>
+              <span class="exp-tag">医疗数字化</span>
             </div>
-        </div>
-
-        <div class="timeline-item">
-            <div class="job-title">联合创始人 / 产品负责人</div>
-            <div class="company">聚爱玩网络科技</div>
-            <span class="period">2013 - 2015</span>
-            <div class="job-desc">
-                统筹CMS、GM工具及用户体系搭建。推动4款产品同步上线双端，建立早期研发协同机制。
+          </div>
+          <div class="experience-item">
+            <div class="exp-title">高级产品经理 · 原始空气（北京）科技</div>
+            <div class="exp-meta">2018 - 2019 · 合规数字资产交易平台</div>
+            <div class="exp-desc">
+              从 0 搭建交易平台，设计交易、资产激励与项目管理体系，
+              交易额峰值 60+ 亿 / 日，支持多资产、多玩法与合规要求。 [oai_citation:2‡孙洪涛-商业化产品经理-10年经验13311505223.pdf](file-service://file-BHTCYa8K4NGJvEszekpRPP)
             </div>
-        </div>
-        
-        <div class="timeline-item">
-            <div class="job-title">产品经理</div>
-            <div class="company">北京金山软件</div>
-            <span class="period">2008 - 2013</span>
-            <div class="job-desc">
-                主导首个页游平台全流程，无预算情况下首月营收26万。设计《剑侠日报》实现60%用户打开率。
+            <div class="exp-tags">
+              <span class="exp-tag">交易平台</span>
+              <span class="exp-tag">风控与合规</span>
+              <span class="exp-tag">增长机制</span>
             </div>
+          </div>
+          <div class="experience-item">
+            <div class="exp-title">产品经理 · 游戏与创业阶段</div>
+            <div class="exp-meta">2008 - 2017 · 金山 / 创业公司 / 发行平台</div>
+            <div class="exp-desc">
+              负责页游平台、发行后台与数据系统建设，支撑多款产品上线与商业化，
+              打磨了面向 C 端用户的体验与留存增长能力。 [oai_citation:3‡孙洪涛-商业化产品经理-10年经验13311505223.pdf](file-service://file-BHTCYa8K4NGJvEszekpRPP)
+            </div>
+            <div class="exp-tags">
+              <span class="exp-tag">平台搭建</span>
+              <span class="exp-tag">运营工具</span>
+              <span class="exp-tag">数据驱动迭代</span>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
+    <!-- Projects -->
     <section id="projects">
-        <h2>精选项目</h2>
-        <div class="project-grid">
-            
-            <div class="project-card">
-                <div class="project-header">
-                    <div class="project-title">学术助理 App</div>
-                    <div class="project-links">
-                        <a href="https://app.mockplus.cn/p/yUQcVdORk" target="_blank" title="查看原型"><i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-                <p class="job-desc">基于347万+实名医生数据，构建集精准检索、虚拟拜访于一体的客情管理平台。服务默克、拜耳等药企，覆盖300+代表。</p>
-                <div class="tech-stack">
-                    <span class="tech-tag">数字化营销</span>
-                    <span class="tech-tag">CRM</span>
-                    <span class="tech-tag">合规监管</span>
-                </div>
+      <h2 class="section-title"><span>Projects</span>核心项目</h2>
+      <div class="projects-grid">
+        <!-- 学术助理 App -->
+        <article class="project-card">
+          <div>
+            <div class="project-title-row">
+              <div class="project-title">学术助理 App</div>
+              <div class="project-badge">代表工具 · 合规留痕</div>
             </div>
-
-            <div class="project-card">
-                <div class="project-header">
-                    <div class="project-title">数字资产银行</div>
-                    <div class="project-links">
-                        <a href="https://app.mockplus.cn/p/x4TOVjTyh" target="_blank" title="查看原型"><i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-                <p class="job-desc">基于“区块链+隐私计算”构建医疗数据确权与流通底座。已构建符合欧盟EUDI标准的数字身份系统，孵化“菌群银行”等应用。</p>
-                <div class="tech-stack">
-                    <span class="tech-tag">区块链</span>
-                    <span class="tech-tag">数据要素</span>
-                    <span class="tech-tag">EUDI标准</span>
-                </div>
+            <div class="project-role">产品负责人 · 医声医事 · 2021 - 2022</div>
+            <p class="project-desc">
+              面向企业临床代表与学术推广场景，从 0 规划学术助理 App，
+              打通精准医生检索、虚拟拜访、短信随访与即时科室会，
+              构建可留痕、可复盘的数字化学术推广闭环。 [oai_citation:4‡孙洪涛-商业化产品经理-10年经验13311505223.pdf](file-service://file-BHTCYa8K4NGJvEszekpRPP)
+            </p>
+            <p class="project-meta">
+              ✓ 覆盖 300+ 企业代表，支持数百场线上科室会，显著提升代表管理透明度与内容投放效率。
+            </p>
+          </div>
+          <div class="project-links">
+            <div class="project-pill-row">
+              <span class="project-pill">精准医生检索</span>
+              <span class="project-pill">虚拟拜访</span>
+              <span class="project-pill">行为留痕</span>
             </div>
+            <a href="https://app.mockplus.cn/p/yUQcVdORk" target="_blank" rel="noopener">
+              查看原型 →
+            </a>
+          </div>
+        </article>
 
-            <div class="project-card">
-                <div class="project-header">
-                    <div class="project-title">司南数据分析平台</div>
-                    <div class="project-links">
-                        <a href="https://app.mockplus.cn/p/kGgFJfXUc0F" target="_blank" title="查看原型"><i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-                <p class="job-desc">可视化数据中台，打造“埋点-分析-画像-大屏”闭环。支持多维度医生画像与自动计算，提升策略制定效率。</p>
-                <div class="tech-stack">
-                    <span class="tech-tag">数据可视化</span>
-                    <span class="tech-tag">用户画像</span>
-                    <span class="tech-tag">BI</span>
-                </div>
+        <!-- 电销外呼平台 -->
+        <article class="project-card">
+          <div>
+            <div class="project-title-row">
+              <div class="project-title">电销外呼平台</div>
+              <div class="project-badge">线索运营 · 行为追踪</div>
             </div>
-
-            <div class="project-card">
-                <div class="project-header">
-                    <div class="project-title">慢病管理平台</div>
-                    <div class="project-links">
-                        <a href="https://app.mockplus.cn/p/gqOmQ0wWXd" target="_blank" title="查看原型"><i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-                <p class="job-desc">支撑真实世界数据采集，规划慢病、儿童健康等产品线。县域慢病方案获国家卫健委立项。</p>
-                <div class="tech-stack">
-                    <span class="tech-tag">互联网医院</span>
-                    <span class="tech-tag">慢病管理</span>
-                </div>
+            <div class="project-role">产品负责人 · 医声医事 · 2022 - 2023</div>
+            <p class="project-desc">
+              自建电销系统，设计「任务触达—行为追踪—数据沉淀—知识积累」全流程外呼机制，
+              安全可控地处理医生线索，补齐响应与转化数据标签，为销售策略提供可视化依据。 [oai_citation:5‡孙洪涛-商业化产品经理-10年经验13311505223.pdf](file-service://file-BHTCYa8K4NGJvEszekpRPP)
+            </p>
+            <p class="project-meta">
+              ✓ 处理线索 35 万+，外呼任务 20 万+，意向转化率 6–12%，服务多家企业电销团队。
+            </p>
+          </div>
+          <div class="project-links">
+            <div class="project-pill-row">
+              <span class="project-pill">线索分发</span>
+              <span class="project-pill">标签体系</span>
+              <span class="project-pill">转化分析</span>
             </div>
+            <a href="https://app.mockplus.cn/p/OwgjQFMbT9" target="_blank" rel="noopener">
+              查看原型 →
+            </a>
+          </div>
+        </article>
 
-        </div>
+        <!-- 司南数据分析平台 -->
+        <article class="project-card">
+          <div>
+            <div class="project-title-row">
+              <div class="project-title">司南数据分析平台</div>
+              <div class="project-badge">数据中台 · 医生画像</div>
+            </div>
+            <div class="project-role">产品负责人 · 云海链 / 医声医事 · 2022 - 2024</div>
+            <p class="project-desc">
+              为支撑医生服务与药械推广的决策，搭建统一数据中台与可视化分析平台。
+              设计属性、关系、行为三层画像体系，提供跨业务场景的数据看板与分析能力。 [oai_citation:6‡孙洪涛-商业化产品经理-10年经验13311505223.pdf](file-service://file-BHTCYa8K4NGJvEszekpRPP)
+            </p>
+            <p class="project-meta">
+              ✓ 支撑销售、市场、运营多团队，实现从「分散数据」到「统一资产」的迁移。
+            </p>
+          </div>
+          <div class="project-links">
+            <div class="project-pill-row">
+              <span class="project-pill">画像体系</span>
+              <span class="project-pill">指标设计</span>
+              <span class="project-pill">可视化看板</span>
+            </div>
+            <a href="https://app.mockplus.cn/p/kGgFJfXUc0F" target="_blank" rel="noopener">
+              查看原型 →
+            </a>
+          </div>
+        </article>
+
+        <!-- 慢病管理与数字健康 -->
+        <article class="project-card">
+          <div>
+            <div class="project-title-row">
+              <div class="project-title">慢病管理 & 数字健康</div>
+              <div class="project-badge">真实世界数据 · 服务闭环</div>
+            </div>
+            <div class="project-role">产品负责人 · 云海链 / 医声医事 · 2022 - 2023</div>
+            <p class="project-desc">
+              围绕慢病管理、儿童健康与县域慢病，设计随访、患者管理、健康服务包、
+              设备接入与指标预警模块，在真实服务场景中沉淀结构化数据资产。 [oai_citation:7‡孙洪涛-商业化产品经理-10年经验13311505223.pdf](file-service://file-BHTCYa8K4NGJvEszekpRPP)
+            </p>
+            <p class="project-meta">
+              ✓ 与互联网医院协同上线，联合医院开展试点，并获得国家级项目立项支持。
+            </p>
+          </div>
+          <div class="project-links">
+            <div class="project-pill-row">
+              <span class="project-pill">慢病路径</span>
+              <span class="project-pill">设备接入</span>
+              <span class="project-pill">指标预警</span>
+            </div>
+            <a href="https://app.mockplus.cn/p/gqOmQ0wWXd" target="_blank" rel="noopener">
+              查看原型 →
+            </a>
+          </div>
+        </article>
+
+        <!-- 数字资产银行 -->
+        <article class="project-card">
+          <div>
+            <div class="project-title-row">
+              <div class="project-title">数字资产银行</div>
+              <div class="project-badge">数据要素 · 数字身份</div>
+            </div>
+            <div class="project-role">产品负责人 · 云海链 · 2024 - 2025</div>
+            <p class="project-desc">
+              作为集团数据要素战略的核心平台，围绕「数字身份、数字钱包、资产账户」
+              搭建数据确权、存证与流通能力，构建开放平台支撑多种数字健康应用孵化。 [oai_citation:8‡孙洪涛-商业化产品经理-10年经验13311505223.pdf](file-service://file-BHTCYa8K4NGJvEszekpRPP)
+            </p>
+            <p class="project-meta">
+              ✓ 联合欧洲团队构建符合 EUDI 标准的数字身份系统，孵化菌群银行与营养健康平台。
+            </p>
+          </div>
+          <div class="project-links">
+            <div class="project-pill-row">
+              <span class="project-pill">可监管链</span>
+              <span class="project-pill">隐私计算</span>
+              <span class="project-pill">开放平台</span>
+            </div>
+            <a href="https://app.mockplus.cn/p/x4TOVjTyh" target="_blank" rel="noopener">
+              查看原型 →
+            </a>
+          </div>
+        </article>
+
+        <!-- 数字资产交易平台 -->
+        <article class="project-card">
+          <div>
+            <div class="project-title-row">
+              <div class="project-title">数字资产交易平台</div>
+              <div class="project-badge">增长机制 · 交易系统</div>
+            </div>
+            <div class="project-role">高级产品经理 · 原始空气 · 2018 - 2019</div>
+            <p class="project-desc">
+              从 0 规划并落地合规数字资产交易平台，设计多种交易产品与激励机制，
+              兼顾合规交付与用户增长，支撑平台在短时间内达成高交易规模与行业排名。 [oai_citation:9‡孙洪涛-商业化产品经理-10年经验13311505223.pdf](file-service://file-BHTCYa8K4NGJvEszekpRPP)
+            </p>
+            <p class="project-meta">
+              ✓ 支持 63+ 项目上线，用户数破 10 万，日交易额峰值 63.74 亿元，进入行业 TOP3。
+            </p>
+          </div>
+          <div class="project-links">
+            <div class="project-pill-row">
+              <span class="project-pill">撮合引擎</span>
+              <span class="project-pill">资产审核</span>
+              <span class="project-pill">激励设计</span>
+            </div>
+            <span style="opacity:.6;">内部平台 · 暂无公开链接</span>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <section id="education" style="border-bottom: none;">
-        <h2>教育背景</h2>
-        <div class="timeline-item" style="border-left: none; padding-left: 0;">
-            <div class="job-title">工商管理 (MBA) / 硕士</div>
-            <div class="company">黑龙江科技大学</div>
-            <span class="period">2021 - 2024</span>
+    <!-- Skills -->
+    <section id="skills">
+      <h2 class="section-title"><span>Skills</span>能力矩阵</h2>
+      <div class="card">
+        <div class="skills-grid">
+          <div>
+            <div class="skills-card-title">Product · 产品能力</div>
+            <ul class="skills-list">
+              <li>平台型产品体系规划（多角色、多端、多业务线）</li>
+              <li>从 0 到 1 产品设计与迭代节奏管理</li>
+              <li>需求洞察与机会评估，路线图规划</li>
+              <li>数据驱动的 AARRR / 漏斗拆解与指标设计</li>
+              <li>To B / To Platform / To G 协同项目推动</li>
+            </ul>
+          </div>
+          <div>
+            <div class="skills-card-title">Data & Tech · 数据与技术理解</div>
+            <ul class="skills-list">
+              <li>数据中台、标签体系、画像体系设计</li>
+              <li>Power BI / BI 报表规划与指标体系梳理</li>
+              <li>SQL 查询与基础建模（视图、宽表）</li>
+              <li>区块链数字身份与可监管链业务抽象</li>
+              <li>API/开放平台产品设计与集成协作</li>
+            </ul>
+          </div>
+          <div>
+            <div class="skills-card-title">Domain · 领域与协作</div>
+            <ul class="skills-list">
+              <li>医疗数字化 / 医生服务 / 数字营销</li>
+              <li>数据资产化与数据要素市场探索</li>
+              <li>交易平台与合规风控场景理解</li>
+              <li>游戏 & 内容产品的运营与留存机制</li>
+              <li>跨地域（北京 / 海南 / 欧洲团队）协作经验</li>
+            </ul>
+          </div>
         </div>
+      </div>
     </section>
 
-    <footer>
-        <p>© 2025 Sun Hongtao. Built with simple code.</p>
-    </footer>
+    <!-- Timeline -->
+    <section id="timeline">
+      <h2 class="section-title"><span>Timeline</span>简要历程</h2>
+      <div class="card">
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-year">2024 - 2025</div>
+            <div class="timeline-text">主导数字资产银行产品规划与落地，围绕数字身份与数据要素构建平台底座。</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2020 - 2023</div>
+            <div class="timeline-text">在医声医事负责商业化产品与数据平台，围绕医生服务打造工具链与数据能力。</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2018 - 2019</div>
+            <div class="timeline-text">构建数字资产交易平台，完成从 0 到 1 的产品验证与商业化突破。</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2008 - 2017</div>
+            <div class="timeline-text">在金山与创业公司搭建游戏平台与运营体系，积累 C 端与平台产品经验。</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- Contact -->
+    <section id="contact">
+      <h2 class="section-title"><span>Contact</span>联系我</h2>
+      <div class="card contact-card">
+        <div class="contact-main">
+          <p>
+            如果你正在寻找一位能够在复杂场景下搭建平台产品体系、
+            用数据驱动业务、并兼顾商业化与交付落地的产品负责人，
+            欢迎随时联系我。
+          </p>
+          <p>
+            我乐于参与大中型平台产品建设（数据中台、医生 / 用户服务平台、数据资产与开放平台等），
+            也愿意和团队一起在新业务中探索从 0 到 1 的路径。
+          </p>
+          <div class="hero-actions" style="margin-top:10px;">
+            <a class="btn btn-primary" href="mailto:86628180@qq.com">
+              发送邮件给我
+            </a>
+            <a class="btn btn-ghost" href="#top">
+              回到顶部
+            </a>
+          </div>
+        </div>
+        <div>
+          <div class="contact-label">Email</div>
+          <div class="contact-value">86628180@qq.com</div>
+          <div class="contact-label" style="margin-top:10px;">Location</div>
+          <div class="contact-value">Beijing · Open to remote / relocation</div>
+          <div class="contact-label" style="margin-top:10px;">GitHub</div>
+          <div class="contact-value">
+            <!-- 替换为你的 GitHub 用户名 -->
+            <a href="https://github.com/" target="_blank" rel="noopener">github.com/your-github-id</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Sun Hongtao · Designed for GitHub Pages
+  </footer>
+</div>
+
+<script>
+  // 更新年份
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
