@@ -1,1059 +1,588 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <title>孙洪涛 · Platform Product Manager</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="孙洪涛 · 平台型产品经理 / 数据与数字化创新 · 个人作品集" />
-  <style>
-    :root {
-      --bg: #060711;
-      --bg-alt: #0f101b;
-      --card: #141521;
-      --accent: #4ea9ff;
-      --accent-soft: rgba(78,169,255,0.08);
-      --text-main: #f5f5f7;
-      --text-sub: #a0a3b1;
-      --border-subtle: #27293a;
-      --radius-lg: 18px;
-      --radius-xl: 24px;
-      --shadow-soft: 0 18px 45px rgba(0,0,0,0.5);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, -sans-serif;
-      background: radial-gradient(circle at top, #15172a 0, #050610 55%, #020308 100%);
-      color: var(--text-main);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    /* Layout */
-    .page {
-      max-width: 1080px;
-      margin: 0 auto;
-      padding: 24px 16px 64px;
-    }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      backdrop-filter: blur(16px);
-      background: linear-gradient(to bottom, rgba(5,6,16,0.92), rgba(5,6,16,0.6), transparent);
-      padding: 10px 0 14px;
-    }
-
-    .nav-inner {
-      max-width: 1080px;
-      margin: 0 auto;
-      padding: 0 16px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .logo-mark {
-      width: 28px;
-      height: 28px;
-      border-radius: 999px;
-      background: radial-gradient(circle at 30% 0%, #6be4ff, #4ea9ff 40%, #1a4a88 100%);
-      box-shadow: 0 0 0 1px rgba(255,255,255,0.12), 0 12px 30px rgba(0,0,0,0.6);
-      position: relative;
-    }
-
-    .logo-mark::after {
-      content: "";
-      position: absolute;
-      inset: 7px;
-      border-radius: inherit;
-      background: radial-gradient(circle at 30% 0%, rgba(255,255,255,0.9), transparent);
-      opacity: 0.6;
-    }
-
-    .logo-text-main {
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      font-size: 14px;
-      text-transform: uppercase;
-    }
-
-    .logo-text-sub {
-      font-size: 11px;
-      color: var(--text-sub);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px 20px;
-      font-size: 13px;
-    }
-
-    .nav-links a {
-      color: var(--text-sub);
-      text-decoration: none;
-      position: relative;
-      padding-bottom: 2px;
-    }
-
-    .nav-links a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      height: 1px;
-      width: 0;
-      background: var(--accent);
-      transition: width 0.2s ease;
-    }
-
-    .nav-links a:hover {
-      color: var(--text-main);
-    }
-
-    .nav-links a:hover::after {
-      width: 100%;
-    }
-
-    main {
-      margin-top: 18px;
-    }
-
-    section {
-      margin-top: 40px;
-    }
-
-    .section-title {
-      font-size: 18px;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 16px;
-    }
-
-    .section-title span {
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--text-sub);
-    }
-
-    .section-title::before {
-      content: "";
-      width: 20px;
-      height: 1px;
-      background: linear-gradient(to right, var(--accent), transparent);
-      opacity: 0.7;
-    }
-
-    /* Hero */
-    .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.2fr);
-      gap: 22px;
-      margin-top: 18px;
-    }
-
-    .hero-main {
-      background: radial-gradient(circle at top left, rgba(78,169,255,0.18), transparent 60%), var(--bg-alt);
-      border-radius: var(--radius-xl);
-      padding: 26px 24px;
-      border: 1px solid rgba(255,255,255,0.02);
-      box-shadow: var(--shadow-soft);
-    }
-
-    .hero-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 3px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.06);
-      background: rgba(14,22,36,0.9);
-      font-size: 11px;
-      color: var(--text-sub);
-      margin-bottom: 14px;
-    }
-
-    .hero-tag-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 999px;
-      background: radial-gradient(circle at 30% 0%, #adffb2, #2dd37c);
-      box-shadow: 0 0 10px rgba(45,211,124,0.9);
-    }
-
-    .hero-title {
-      font-size: 28px;
-      font-weight: 650;
-      margin-bottom: 10px;
-    }
-
-    .hero-subtitle {
-      font-size: 14px;
-      color: var(--text-sub);
-      max-width: 480px;
-      margin-bottom: 18px;
-    }
-
-    .hero-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px 16px;
-      font-size: 12px;
-      color: var(--text-sub);
-      margin-bottom: 20px;
-    }
-
-    .hero-meta span {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .hero-meta-dot {
-      width: 5px;
-      height: 5px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.5);
-      opacity: 0.7;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .btn {
-      font-size: 13px;
-      padding: 8px 14px;
-      border-radius: 999px;
-      border: 1px solid transparent;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: none;
-      color: var(--text-main);
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, #4ea9ff, #6be4ff);
-      color: #050711;
-      font-weight: 500;
-      box-shadow: 0 12px 30px rgba(78,169,255,0.45);
-    }
-
-    .btn-primary:hover {
-      box-shadow: 0 18px 40px rgba(78,169,255,0.6);
-      transform: translateY(-1px);
-    }
-
-    .btn-ghost {
-      border-color: rgba(255,255,255,0.12);
-      color: var(--text-sub);
-      background: rgba(9,11,22,0.85);
-    }
-
-    .btn-ghost:hover {
-      border-color: rgba(255,255,255,0.3);
-      color: var(--text-main);
-    }
-
-    .hero-side {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-
-    .hero-card {
-      background: rgba(10,11,22,0.96);
-      border-radius: var(--radius-lg);
-      padding: 14px 14px 12px;
-      border: 1px solid var(--border-subtle);
-    }
-
-    .hero-card-title {
-      font-size: 13px;
-      font-weight: 500;
-      margin-bottom: 4px;
-    }
-
-    .hero-card-sub {
-      font-size: 12px;
-      color: var(--text-sub);
-      margin-bottom: 6px;
-    }
-
-    .hero-pills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 4px;
-    }
-
-    .pill {
-      font-size: 11px;
-      padding: 3px 9px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.06);
-      color: var(--text-sub);
-      background: rgba(12,13,25,0.96);
-    }
-
-    .metric-row {
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
-      font-size: 11px;
-      color: var(--text-sub);
-      margin-top: 6px;
-    }
-
-    .metric-label {
-      opacity: 0.8;
-    }
-
-    .metric-value {
-      color: #e2e4ff;
-    }
-
-    /* About & Experience */
-    .about-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
-      gap: 20px;
-    }
-
-    .card {
-      background: var(--bg-alt);
-      border-radius: var(--radius-lg);
-      border: 1px solid var(--border-subtle);
-      padding: 16px 16px 14px;
-    }
-
-    .card p {
-      font-size: 13px;
-      color: var(--text-sub);
-    }
-
-    .experience-item {
-      margin-bottom: 12px;
-    }
-
-    .exp-title {
-      font-size: 13px;
-      font-weight: 500;
-    }
-
-    .exp-meta {
-      font-size: 11px;
-      color: var(--text-sub);
-      margin-bottom: 4px;
-    }
-
-    .exp-desc {
-      font-size: 12px;
-      color: var(--text-sub);
-    }
-
-    .exp-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 6px;
-    }
-
-    .exp-tag {
-      font-size: 10px;
-      padding: 2px 7px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.06);
-      color: var(--text-sub);
-    }
-
-    /* Projects */
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-    }
-
-    .project-card {
-      background: var(--card);
-      border-radius: var(--radius-lg);
-      border: 1px solid var(--border-subtle);
-      padding: 14px 14px 10px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .project-title-row {
-      display: flex;
-      justify-content: space-between;
-      gap: 8px;
-      align-items: center;
-      margin-bottom: 4px;
-    }
-
-    .project-title {
-      font-size: 13px;
-      font-weight: 500;
-    }
-
-    .project-badge {
-      font-size: 10px;
-      padding: 2px 7px;
-      border-radius: 999px;
-      background: rgba(78,169,255,0.08);
-      border: 1px solid rgba(78,169,255,0.4);
-      color: #c4e2ff;
-    }
-
-    .project-role {
-      font-size: 11px;
-      color: var(--text-sub);
-      margin-bottom: 5px;
-    }
-
-    .project-desc {
-      font-size: 12px;
-      color: var(--text-sub);
-      margin-bottom: 8px;
-    }
-
-    .project-meta {
-      font-size: 11px;
-      color: var(--text-sub);
-      margin-bottom: 6px;
-    }
-
-    .project-links {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 11px;
-      margin-top: 6px;
-    }
-
-    .project-links a {
-      text-decoration: none;
-    }
-
-    .project-pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 5px;
-      margin-top: 4px;
-    }
-
-    .project-pill {
-      font-size: 10px;
-      padding: 2px 6px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.06);
-      color: var(--text-sub);
-    }
-
-    /* Skills */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 12px;
-    }
-
-    .skills-card-title {
-      font-size: 12px;
-      font-weight: 500;
-      margin-bottom: 6px;
-    }
-
-    .skills-list {
-      list-style: none;
-      font-size: 12px;
-      color: var(--text-sub);
-    }
-
-    .skills-list li {
-      margin-bottom: 3px;
-    }
-
-    /* Timeline */
-    .timeline {
-      border-left: 1px solid rgba(255,255,255,0.08);
-      padding-left: 12px;
-      margin-left: 4px;
-    }
-
-    .timeline-item {
-      margin-bottom: 10px;
-      position: relative;
-      padding-left: 8px;
-    }
-
-    .timeline-item::before {
-      content: "";
-      position: absolute;
-      left: -13px;
-      top: 5px;
-      width: 7px;
-      height: 7px;
-      border-radius: 999px;
-      background: var(--accent);
-      box-shadow: 0 0 0 3px rgba(78,169,255,0.25);
-    }
-
-    .timeline-year {
-      font-size: 11px;
-      color: var(--text-sub);
-    }
-
-    .timeline-text {
-      font-size: 12px;
-    }
-
-    /* Contact */
-    .contact-card {
-      display: grid;
-      grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
-      gap: 18px;
-      align-items: center;
-    }
-
-    .contact-main p {
-      font-size: 13px;
-      color: var(--text-sub);
-      margin-bottom: 10px;
-    }
-
-    .contact-meta {
-      font-size: 12px;
-      color: var(--text-sub);
-    }
-
-    .contact-label {
-      font-size: 11px;
-      color: var(--text-sub);
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      margin-bottom: 4px;
-    }
-
-    .contact-value {
-      font-size: 13px;
-    }
-
-    footer {
-      margin-top: 32px;
-      font-size: 11px;
-      color: #666a7a;
-      text-align: center;
-    }
-
-    /* Responsive */
-    @media (max-width: 860px) {
-      .hero {
-        grid-template-columns: minmax(0, 1fr);
-      }
-      .hero-main {
-        order: 1;
-      }
-      .hero-side {
-        order: 2;
-      }
-      .about-grid,
-      .projects-grid,
-      .skills-grid,
-      .contact-card {
-        grid-template-columns: minmax(0, 1fr);
-      }
-      header {
-        padding-top: 8px;
-      }
-      .nav-inner {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .section-title {
-        margin-top: 8px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .hero-title {
-        font-size: 22px;
-      }
-
-      .hero-main {
-        padding: 20px 16px;
-      }
-
-      .page {
-        padding-inline: 14px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>孙洪涛 - Product Manager Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans SC', 'sans-serif'],
+                    },
+                    colors: {
+                        'main-bg': '#0a0a0a',      // 极简黑
+                        'card-bg': '#141414',      // 卡片深灰
+                        'accent-blue': '#3b82f6',  // 科技蓝
+                        'text-main': '#ffffff',    // 纯白
+                        'text-muted': '#a3a3a3',   // 高级灰
+                        'border-light': 'rgba(255, 255, 255, 0.08)',
+                    },
+                    letterSpacing: {
+                        'widest-xl': '.2em',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* 自定义滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0a0a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        /* 通用 Section 样式：至少占满一屏，内容居中 */
+        section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 80px 24px; /* 上下留白 */
+            position: relative;
+            border-bottom: 1px solid rgba(255,255,255,0.03);
+        }
+
+        /* 导航栏磨砂效果 */
+        .glass-nav {
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        /* 标签云样式 */
+        .tag-cloud-item {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 6px 14px;
+            border-radius: 100px;
+            font-size: 0.85rem;
+            color: #d4d4d4;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+        .tag-cloud-item:hover {
+            background: rgba(59, 130, 246, 0.2);
+            border-color: rgba(59, 130, 246, 0.5);
+            color: white;
+        }
+
+        /* 动画类 */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUpAnim 0.8s ease-out forwards;
+        }
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+
+        @keyframes fadeUpAnim {
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* 技能列表的小圆点装饰 */
+        .skill-dot {
+            width: 6px;
+            height: 6px;
+            background-color: #3b82f6;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 8px;
+        }
+    </style>
 </head>
-<body>
-<header>
-  <div class="nav-inner">
-    <div class="logo">
-      <div class="logo-mark"></div>
-      <div>
-        <div class="logo-text-main">SUN HONGTAO</div>
-        <div class="logo-text-sub">PLATFORM PRODUCT · DATA</div>
-      </div>
-    </div>
-    <nav class="nav-links">
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#timeline">Timeline</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
-</header>
+<body class="antialiased selection:bg-accent-blue selection:text-white">
 
-<div class="page">
-  <main>
-    <!-- Hero -->
-    <section class="hero" id="top">
-      <div class="hero-main">
-        <div class="hero-tag">
-          <span class="hero-tag-dot"></span>
-          <span>Platform Product Manager · Data & Digital Innovation</span>
-        </div>
-        <h1 class="hero-title">孙洪涛 · Platform Product & Data Product Manager</h1>
-        <p class="hero-subtitle">
-          10+ 年产品经验，专注平台型产品规划、数据驱动决策与商业化增长。
-          先后在医疗数字化、数据资产银行、数字营销与交易平台等领域从 0 到 1
-          落地多款复杂系统产品。
-        </p>
-        <div class="hero-meta">
-          <span><span class="hero-meta-dot"></span> Beijing / Open to remote</span>
-          <span><span class="hero-meta-dot"></span> Product Strategy · Data Platform · Commercialization</span>
-        </div>
-        <div class="hero-actions">
-          <!-- 替换为你的简历 PDF 路径，例如 ./cv.pdf -->
-          <a class="btn btn-primary" href="#" target="_blank" rel="noopener">
-            下载简历（CN）
-          </a>
-          <a class="btn btn-ghost" href="#projects">
-            查看核心项目
-          </a>
-        </div>
-      </div>
+    <!-- 顶部固定导航 -->
+    <header class="fixed top-0 left-0 w-full z-50 glass-nav border-b border-border-light transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="#hero" class="text-xl font-bold tracking-widest text-white uppercase hover:text-accent-blue transition-colors">S.HT</a>
+            
+            <nav class="hidden md:flex space-x-10 text-xs font-medium tracking-widest text-text-muted">
+                <a href="#about" class="hover:text-white transition-colors uppercase">About</a>
+                <a href="#skills" class="hover:text-white transition-colors uppercase">Skills</a>
+                <a href="#experience" class="hover:text-white transition-colors uppercase">Experience</a>
+                <a href="#projects" class="hover:text-white transition-colors uppercase">Projects</a>
+                <a href="#contact" class="hover:text-white transition-colors uppercase">Contact</a>
+            </nav>
 
-      <aside class="hero-side">
-        <div class="hero-card">
-          <div class="hero-card-title">个人概览 / Snapshot</div>
-          <div class="hero-card-sub">快速了解我的背景与价值主张。</div>
-          <div class="metric-row">
-            <div class="metric-label">产品经验</div>
-            <div class="metric-value">10+ 年</div>
-          </div>
-          <div class="metric-row">
-            <div class="metric-label">领域</div>
-            <div class="metric-value">医疗数字化 · 数据资产 · 交易平台 · 游戏</div>
-          </div>
-          <div class="metric-row">
-            <div class="metric-label">角色</div>
-            <div class="metric-value">商业化产品 / 平台产品 / 高级产品经理</div>
-          </div>
-          <div class="hero-pills" style="margin-top:8px;">
-            <span class="pill">平台体系规划</span>
-            <span class="pill">数据驱动决策</span>
-            <span class="pill">跨团队协同</span>
-            <span class="pill">从 0 到 1</span>
-          </div>
+            <a href="#contact" class="px-5 py-2 border border-white/20 rounded-full text-xs text-white hover:bg-white hover:text-black transition-all uppercase tracking-wide">
+                Get in Touch
+            </a>
+        </div>
+    </header>
+
+    <!-- SECTION 1: HERO (首屏) -->
+    <section id="hero" class="bg-main-bg">
+        <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            
+            <!-- 左侧文案 -->
+            <div class="fade-up order-2 lg:order-1">
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight tracking-tight">
+                    用产品思维，<br>
+                    让复杂系统变得<br>
+                    <span class="text-accent-blue">清晰、可执行、可增长</span>。
+                </h1>
+                
+                <p class="text-lg text-text-muted leading-relaxed mb-8 max-w-xl">
+                    10+ 年平台型产品经验，覆盖中后台系统、商业化工具链、用户增长、数据分析与多角色业务协同。<br>
+                    专长于 0→1 产品规划、体系化能力建设与跨团队推进。
+                </p>
+
+                <!-- 标签云 -->
+                <div class="flex flex-wrap gap-3 mb-10">
+                    <span class="tag-cloud-item">平台型产品经理</span>
+                    <span class="tag-cloud-item">增长与商业化</span>
+                    <span class="tag-cloud-item">中后台产品体系</span>
+                    <span class="tag-cloud-item">数据驱动决策</span>
+                    <span class="tag-cloud-item">跨团队协同</span>
+                    <span class="tag-cloud-item">复杂业务抽象</span>
+                    <span class="tag-cloud-item">产品从 0 到 1</span>
+                </div>
+
+                <!-- 按钮组 -->
+                <div class="flex gap-4">
+                    <a href="#projects" class="px-8 py-3.5 bg-accent-blue text-white rounded-lg font-medium hover:bg-blue-600 transition-colors shadow-lg shadow-blue-900/30">
+                        查看项目集
+                    </a>
+                    <button onclick="window.print()" class="px-8 py-3.5 border border-white/20 text-white rounded-lg font-medium hover:bg-white/5 transition-colors flex items-center gap-2">
+                        <i class="fa-solid fa-download"></i> 下载 PDF 简历
+                    </button>
+                </div>
+            </div>
+
+            <!-- 右侧图片占位 -->
+            <div class="fade-up delay-200 order-1 lg:order-2 flex justify-center lg:justify-end">
+                <div class="relative w-64 h-64 md:w-96 md:h-96 rounded-full overflow-hidden border-2 border-white/10 bg-[#1a1a1a] shadow-2xl">
+                    <!-- 提示：请在此处替换您的头像图片 -->
+                    <div class="absolute inset-0 flex flex-col items-center justify-center text-text-muted opacity-50">
+                        <i class="fa-solid fa-user text-6xl mb-4"></i>
+                        <span class="text-sm">Profile Image Placeholder</span>
+                    </div>
+                    <!-- <img src="your-photo.jpg" alt="孙洪涛" class="object-cover w-full h-full opacity-90 hover:opacity-100 transition-opacity"> -->
+                </div>
+            </div>
         </div>
 
-        <div class="hero-card">
-          <div class="hero-card-title">当前关注 / What I'm focusing on</div>
-          <div class="hero-card-sub">希望在以下方向继续深耕与落地。</div>
-          <div class="hero-pills">
-            <span class="pill">数据中台 & BI</span>
-            <span class="pill">数字身份 & 数据要素</span>
-            <span class="pill">B2B2X 平台</span>
-            <span class="pill">AIGC & 增长工具链</span>
-          </div>
+        <!-- 向下滚动提示 -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-text-muted/30 animate-bounce">
+            <i class="fa-solid fa-chevron-down text-xl"></i>
         </div>
-      </aside>
     </section>
 
-    <!-- About & Experience -->
-    <section id="about">
-      <h2 class="section-title"><span>About</span>关于我</h2>
-      <div class="about-grid">
-        <div class="card">
-          <p>
-            我是一名平台型产品经理，擅长在复杂业务场景下抽象产品结构，
-            规划多角色、多端协同的产品体系，并用数据闭环推动持续增长。
-            过往经历横跨医疗数字化、数据资产银行、数字营销、区块链与游戏行业，
-            熟悉 B 端、平台及增长场景。<br><br>
-            面对不确定的业务目标，我习惯先搭建「问题地图」与「系统模型」，
-            再拆解为可执行的产品路线图和迭代节奏：从愿景、架构到指标，
-            以产品语言把业务目标变成团队可以共识的方向。
-          </p>
+    <!-- SECTION 2: ABOUT (个人简介) -->
+    <section id="about" class="bg-[#0c0c0c]">
+        <div class="max-w-4xl mx-auto text-center px-4 fade-up">
+            <i class="fa-solid fa-quote-left text-4xl text-accent-blue/30 mb-8 block"></i>
+            
+            <h2 class="text-3xl md:text-4xl font-light text-white leading-relaxed mb-10">
+                我相信好的产品能让<br>
+                <span class="font-bold text-accent-blue">复杂世界变得简单</span>。
+            </h2>
+
+            <div class="text-lg md:text-xl text-text-muted space-y-6 font-light leading-relaxed">
+                <p>
+                    过去的十年，我在多个行业负责平台型产品的规划与落地，<br class="hidden md:block">
+                    经历从 0 到 1、从 1 到 N 的完整周期。
+                </p>
+                <p>
+                    我关注结构化思考、数据驱动、用户体验与跨团队协作，<br class="hidden md:block">
+                    也关注产品的长期价值与可持续增长。
+                </p>
+                <p class="text-white pt-4">
+                    我持续在探索：<br>
+                    如何让系统更轻、决策更准、体验更好、增长更自然。
+                </p>
+            </div>
         </div>
-        <div class="card" id="experience">
-          <div class="experience-item">
-            <div class="exp-title">商业化 / 平台产品经理 · 医声医事（北京）科技有限公司</div>
-            <div class="exp-meta">2020 - 至今 · 医疗数字化服务与数据资产化平台</div>
-            <div class="exp-desc">
-              负责商业化产品体系与创新方向：搭建学术活动、企业专区、电销平台、
-              医生画像与数据中台、慢病管理与数字资产银行等一系列产品，支撑医生服务与数据要素业务升级。 [oai_citation:1‡孙洪涛-商业化产品经理-10年经验13311505223.pdf](file-service://file-BHTCYa8K4NGJvEszekpRPP)
-            </div>
-            <div class="exp-tags">
-              <span class="exp-tag">商业化产品</span>
-              <span class="exp-tag">B2B2D 平台</span>
-              <span class="exp-tag">数据资产</span>
-              <span class="exp-tag">医疗数字化</span>
-            </div>
-          </div>
-          <div class="experience-item">
-            <div class="exp-title">高级产品经理 · 原始空气（北京）科技</div>
-            <div class="exp-meta">2018 - 2019 · 合规数字资产交易平台</div>
-            <div class="exp-desc">
-              从 0 搭建交易平台，设计交易、资产激励与项目管理体系，
-              交易额峰值 60+ 亿 / 日，支持多资产、多玩法与合规要求。 [oai_citation:2‡孙洪涛-商业化产品经理-10年经验13311505223.pdf](file-service://file-BHTCYa8K4NGJvEszekpRPP)
-            </div>
-            <div class="exp-tags">
-              <span class="exp-tag">交易平台</span>
-              <span class="exp-tag">风控与合规</span>
-              <span class="exp-tag">增长机制</span>
-            </div>
-          </div>
-          <div class="experience-item">
-            <div class="exp-title">产品经理 · 游戏与创业阶段</div>
-            <div class="exp-meta">2008 - 2017 · 金山 / 创业公司 / 发行平台</div>
-            <div class="exp-desc">
-              负责页游平台、发行后台与数据系统建设，支撑多款产品上线与商业化，
-              打磨了面向 C 端用户的体验与留存增长能力。 [oai_citation:3‡孙洪涛-商业化产品经理-10年经验13311505223.pdf](file-service://file-BHTCYa8K4NGJvEszekpRPP)
-            </div>
-            <div class="exp-tags">
-              <span class="exp-tag">平台搭建</span>
-              <span class="exp-tag">运营工具</span>
-              <span class="exp-tag">数据驱动迭代</span>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
 
-    <!-- Projects -->
-    <section id="projects">
-      <h2 class="section-title"><span>Projects</span>核心项目</h2>
-      <div class="projects-grid">
-        <!-- 学术助理 App -->
-        <article class="project-card">
-          <div>
-            <div class="project-title-row">
-              <div class="project-title">学术助理 App</div>
-              <div class="project-badge">代表工具 · 合规留痕</div>
+    <!-- SECTION 3: SKILLS (核心能力) -->
+    <section id="skills" class="bg-main-bg">
+        <div class="max-w-7xl mx-auto w-full">
+            <div class="mb-16 md:mb-24 border-l-4 border-accent-blue pl-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-2">Core Competencies</h2>
+                <p class="text-text-muted tracking-widest uppercase text-sm">核心能力架构</p>
             </div>
-            <div class="project-role">产品负责人 · 医声医事 · 2021 - 2022</div>
-            <p class="project-desc">
-              面向企业临床代表与学术推广场景，从 0 规划学术助理 App，
-              打通精准医生检索、虚拟拜访、短信随访与即时科室会，
-              构建可留痕、可复盘的数字化学术推广闭环。 [oai_citation:4‡孙洪涛-商业化产品经理-10年经验13311505223.pdf](file-service://file-BHTCYa8K4NGJvEszekpRPP)
-            </p>
-            <p class="project-meta">
-              ✓ 覆盖 300+ 企业代表，支持数百场线上科室会，显著提升代表管理透明度与内容投放效率。
-            </p>
-          </div>
-          <div class="project-links">
-            <div class="project-pill-row">
-              <span class="project-pill">精准医生检索</span>
-              <span class="project-pill">虚拟拜访</span>
-              <span class="project-pill">行为留痕</span>
-            </div>
-            <a href="https://app.mockplus.cn/p/yUQcVdORk" target="_blank" rel="noopener">
-              查看原型 →
-            </a>
-          </div>
-        </article>
 
-        <!-- 电销外呼平台 -->
-        <article class="project-card">
-          <div>
-            <div class="project-title-row">
-              <div class="project-title">电销外呼平台</div>
-              <div class="project-badge">线索运营 · 行为追踪</div>
-            </div>
-            <div class="project-role">产品负责人 · 医声医事 · 2022 - 2023</div>
-            <p class="project-desc">
-              自建电销系统，设计「任务触达—行为追踪—数据沉淀—知识积累」全流程外呼机制，
-              安全可控地处理医生线索，补齐响应与转化数据标签，为销售策略提供可视化依据。 [oai_citation:5‡孙洪涛-商业化产品经理-10年经验13311505223.pdf](file-service://file-BHTCYa8K4NGJvEszekpRPP)
-            </p>
-            <p class="project-meta">
-              ✓ 处理线索 35 万+，外呼任务 20 万+，意向转化率 6–12%，服务多家企业电销团队。
-            </p>
-          </div>
-          <div class="project-links">
-            <div class="project-pill-row">
-              <span class="project-pill">线索分发</span>
-              <span class="project-pill">标签体系</span>
-              <span class="project-pill">转化分析</span>
-            </div>
-            <a href="https://app.mockplus.cn/p/OwgjQFMbT9" target="_blank" rel="noopener">
-              查看原型 →
-            </a>
-          </div>
-        </article>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- 1. Product Skills -->
+                <div class="bg-card-bg p-8 rounded-xl border border-border-light hover:border-accent-blue/50 transition-colors group">
+                    <div class="flex items-center gap-3 mb-8">
+                        <div class="w-10 h-10 rounded-full bg-purple-500/10 flex items-center justify-center text-purple-400 group-hover:bg-purple-500 group-hover:text-white transition-all">
+                            <i class="fa-solid fa-compass-drafting"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">产品技能</h3>
+                    </div>
+                    <ul class="space-y-4 text-text-muted">
+                        <li class="flex items-start"><span class="skill-dot mt-2"></span>需求拆解与机会判断</li>
+                        <li class="flex items-start"><span class="skill-dot mt-2"></span>复杂业务抽象</li>
+                        <li class="flex items-start"><span class="skill-dot mt-2"></span>PRD / 用户故事 / Use Cases</li>
+                        <li class="flex items-start"><span class="skill-dot mt-2"></span>中后台架构 & 能力规划</li>
+                        <li class="flex items-start"><span class="skill-dot mt-2"></span>指标体系设计（埋点/漏斗）</li>
+                        <li class="flex items-start"><span class="skill-dot mt-2"></span>A/B 实验与增长模型</li>
+                        <li class="flex items-start"><span class="skill-dot mt-2"></span>商业化场景设计</li>
+                    </ul>
+                </div>
 
-        <!-- 司南数据分析平台 -->
-        <article class="project-card">
-          <div>
-            <div class="project-title-row">
-              <div class="project-title">司南数据分析平台</div>
-              <div class="project-badge">数据中台 · 医生画像</div>
-            </div>
-            <div class="project-role">产品负责人 · 云海链 / 医声医事 · 2022 - 2024</div>
-            <p class="project-desc">
-              为支撑医生服务与药械推广的决策，搭建统一数据中台与可视化分析平台。
-              设计属性、关系、行为三层画像体系，提供跨业务场景的数据看板与分析能力。 [oai_citation:6‡孙洪涛-商业化产品经理-10年经验13311505223.pdf](file-service://file-BHTCYa8K4NGJvEszekpRPP)
-            </p>
-            <p class="project-meta">
-              ✓ 支撑销售、市场、运营多团队，实现从「分散数据」到「统一资产」的迁移。
-            </p>
-          </div>
-          <div class="project-links">
-            <div class="project-pill-row">
-              <span class="project-pill">画像体系</span>
-              <span class="project-pill">指标设计</span>
-              <span class="project-pill">可视化看板</span>
-            </div>
-            <a href="https://app.mockplus.cn/p/kGgFJfXUc0F" target="_blank" rel="noopener">
-              查看原型 →
-            </a>
-          </div>
-        </article>
+                <!-- 2. Tool Stack -->
+                <div class="bg-card-bg p-8 rounded-xl border border-border-light hover:border-accent-blue/50 transition-colors group">
+                    <div class="flex items-center gap-3 mb-8">
+                        <div class="w-10 h-10 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-400 group-hover:bg-blue-500 group-hover:text-white transition-all">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">工具栈</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tag-cloud-item">Figma</span>
+                        <span class="tag-cloud-item">Axure</span>
+                        <span class="tag-cloud-item">Mockplus</span>
+                        <span class="tag-cloud-item">SQL (MySQL)</span>
+                        <span class="tag-cloud-item">Power BI</span>
+                        <span class="tag-cloud-item">Jira</span>
+                        <span class="tag-cloud-item">Confluence</span>
+                        <span class="tag-cloud-item">Notion</span>
+                        <span class="tag-cloud-item">Git Flow</span>
+                        <span class="tag-cloud-item">Keynote</span>
+                    </div>
+                </div>
 
-        <!-- 慢病管理与数字健康 -->
-        <article class="project-card">
-          <div>
-            <div class="project-title-row">
-              <div class="project-title">慢病管理 & 数字健康</div>
-              <div class="project-badge">真实世界数据 · 服务闭环</div>
-            </div>
-            <div class="project-role">产品负责人 · 云海链 / 医声医事 · 2022 - 2023</div>
-            <p class="project-desc">
-              围绕慢病管理、儿童健康与县域慢病，设计随访、患者管理、健康服务包、
-              设备接入与指标预警模块，在真实服务场景中沉淀结构化数据资产。 [oai_citation:7‡孙洪涛-商业化产品经理-10年经验13311505223.pdf](file-service://file-BHTCYa8K4NGJvEszekpRPP)
-            </p>
-            <p class="project-meta">
-              ✓ 与互联网医院协同上线，联合医院开展试点，并获得国家级项目立项支持。
-            </p>
-          </div>
-          <div class="project-links">
-            <div class="project-pill-row">
-              <span class="project-pill">慢病路径</span>
-              <span class="project-pill">设备接入</span>
-              <span class="project-pill">指标预警</span>
-            </div>
-            <a href="https://app.mockplus.cn/p/gqOmQ0wWXd" target="_blank" rel="noopener">
-              查看原型 →
-            </a>
-          </div>
-        </article>
+                <!-- 3. Soft Skills -->
+                <div class="bg-card-bg p-8 rounded-xl border border-border-light hover:border-accent-blue/50 transition-colors group">
+                    <div class="flex items-center gap-3 mb-8">
+                        <div class="w-10 h-10 rounded-full bg-green-500/10 flex items-center justify-center text-green-400 group-hover:bg-green-500 group-hover:text-white transition-all">
+                            <i class="fa-solid fa-users-gear"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">软技能</h3>
+                    </div>
+                    <ul class="space-y-4 text-text-muted">
+                        <li class="flex items-start"><span class="skill-dot mt-2 bg-green-500"></span>结构化沟通</li>
+                        <li class="flex items-start"><span class="skill-dot mt-2 bg-green-500"></span>多团队 / 多角色协同</li>
+                        <li class="flex items-start"><span class="skill-dot mt-2 bg-green-500"></span>决策推动 & 风险识别</li>
+                        <li class="flex items-start"><span class="skill-dot mt-2 bg-green-500"></span>复杂场景抽象能力</li>
+                        <li class="flex items-start"><span class="skill-dot mt-2 bg-green-500"></span>大型项目推进</li>
+                        <li class="flex items-start"><span class="skill-dot mt-2 bg-green-500"></span>从 0 到 1 创新落地</li>
+                    </ul>
+                </div>
 
-        <!-- 数字资产银行 -->
-        <article class="project-card">
-          <div>
-            <div class="project-title-row">
-              <div class="project-title">数字资产银行</div>
-              <div class="project-badge">数据要素 · 数字身份</div>
             </div>
-            <div class="project-role">产品负责人 · 云海链 · 2024 - 2025</div>
-            <p class="project-desc">
-              作为集团数据要素战略的核心平台，围绕「数字身份、数字钱包、资产账户」
-              搭建数据确权、存证与流通能力，构建开放平台支撑多种数字健康应用孵化。 [oai_citation:8‡孙洪涛-商业化产品经理-10年经验13311505223.pdf](file-service://file-BHTCYa8K4NGJvEszekpRPP)
-            </p>
-            <p class="project-meta">
-              ✓ 联合欧洲团队构建符合 EUDI 标准的数字身份系统，孵化菌群银行与营养健康平台。
-            </p>
-          </div>
-          <div class="project-links">
-            <div class="project-pill-row">
-              <span class="project-pill">可监管链</span>
-              <span class="project-pill">隐私计算</span>
-              <span class="project-pill">开放平台</span>
-            </div>
-            <a href="https://app.mockplus.cn/p/x4TOVjTyh" target="_blank" rel="noopener">
-              查看原型 →
-            </a>
-          </div>
-        </article>
-
-        <!-- 数字资产交易平台 -->
-        <article class="project-card">
-          <div>
-            <div class="project-title-row">
-              <div class="project-title">数字资产交易平台</div>
-              <div class="project-badge">增长机制 · 交易系统</div>
-            </div>
-            <div class="project-role">高级产品经理 · 原始空气 · 2018 - 2019</div>
-            <p class="project-desc">
-              从 0 规划并落地合规数字资产交易平台，设计多种交易产品与激励机制，
-              兼顾合规交付与用户增长，支撑平台在短时间内达成高交易规模与行业排名。 [oai_citation:9‡孙洪涛-商业化产品经理-10年经验13311505223.pdf](file-service://file-BHTCYa8K4NGJvEszekpRPP)
-            </p>
-            <p class="project-meta">
-              ✓ 支持 63+ 项目上线，用户数破 10 万，日交易额峰值 63.74 亿元，进入行业 TOP3。
-            </p>
-          </div>
-          <div class="project-links">
-            <div class="project-pill-row">
-              <span class="project-pill">撮合引擎</span>
-              <span class="project-pill">资产审核</span>
-              <span class="project-pill">激励设计</span>
-            </div>
-            <span style="opacity:.6;">内部平台 · 暂无公开链接</span>
-          </div>
-        </article>
-      </div>
+        </div>
     </section>
 
-    <!-- Skills -->
-    <section id="skills">
-      <h2 class="section-title"><span>Skills</span>能力矩阵</h2>
-      <div class="card">
-        <div class="skills-grid">
-          <div>
-            <div class="skills-card-title">Product · 产品能力</div>
-            <ul class="skills-list">
-              <li>平台型产品体系规划（多角色、多端、多业务线）</li>
-              <li>从 0 到 1 产品设计与迭代节奏管理</li>
-              <li>需求洞察与机会评估，路线图规划</li>
-              <li>数据驱动的 AARRR / 漏斗拆解与指标设计</li>
-              <li>To B / To Platform / To G 协同项目推动</li>
-            </ul>
-          </div>
-          <div>
-            <div class="skills-card-title">Data & Tech · 数据与技术理解</div>
-            <ul class="skills-list">
-              <li>数据中台、标签体系、画像体系设计</li>
-              <li>Power BI / BI 报表规划与指标体系梳理</li>
-              <li>SQL 查询与基础建模（视图、宽表）</li>
-              <li>区块链数字身份与可监管链业务抽象</li>
-              <li>API/开放平台产品设计与集成协作</li>
-            </ul>
-          </div>
-          <div>
-            <div class="skills-card-title">Domain · 领域与协作</div>
-            <ul class="skills-list">
-              <li>医疗数字化 / 医生服务 / 数字营销</li>
-              <li>数据资产化与数据要素市场探索</li>
-              <li>交易平台与合规风控场景理解</li>
-              <li>游戏 & 内容产品的运营与留存机制</li>
-              <li>跨地域（北京 / 海南 / 欧洲团队）协作经验</li>
-            </ul>
-          </div>
+    <!-- SECTION 4: EXPERIENCE (工作经历) -->
+    <section id="experience" class="bg-[#0c0c0c]">
+        <div class="max-w-6xl mx-auto w-full">
+             <div class="mb-16 border-l-4 border-white pl-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-2">Experience</h2>
+                <p class="text-text-muted tracking-widest uppercase text-sm">职业生涯轨迹</p>
+            </div>
+
+            <!-- 时间轴容器 -->
+            <div class="relative space-y-12">
+                <!-- 垂直线 (PC显示) -->
+                <div class="hidden md:block absolute left-[180px] top-2 bottom-0 w-px bg-white/10"></div>
+
+                <!-- Job 1 -->
+                <div class="flex flex-col md:flex-row gap-6 md:gap-16 group">
+                    <div class="md:w-[180px] shrink-0 text-left md:text-right pt-1">
+                        <div class="text-accent-blue font-bold text-lg">2020 – 至今</div>
+                        <div class="text-text-muted text-sm mt-1">北京</div>
+                    </div>
+                    <div class="flex-1 relative">
+                        <!-- 装饰点 -->
+                        <div class="hidden md:block absolute -left-[41px] top-2 w-3 h-3 bg-card-bg border-2 border-accent-blue rounded-full z-10 group-hover:bg-accent-blue transition-colors"></div>
+                        
+                        <div class="bg-card-bg p-6 rounded-lg border border-border-light hover:border-white/20 transition-all">
+                            <div class="flex flex-wrap justify-between items-baseline mb-3">
+                                <h3 class="text-xl font-bold text-white">商业化产品经理</h3>
+                                <span class="text-sm text-text-muted">医声医事 (北京) 科技有限公司</span>
+                            </div>
+                            <!-- Tags -->
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="text-xs border border-white/10 px-2 py-0.5 rounded text-gray-400">平台产品</span>
+                                <span class="text-xs border border-white/10 px-2 py-0.5 rounded text-gray-400">商业化体系</span>
+                                <span class="text-xs border border-white/10 px-2 py-0.5 rounded text-gray-400">数据产品</span>
+                            </div>
+                            <ul class="list-disc list-outside ml-4 space-y-2 text-sm text-gray-400 leading-relaxed">
+                                <li>规划商业化工具链，构建多个模块化产品，提升营收与客户复用率。</li>
+                                <li>主导多个 0→1 产品，如触达平台、外呼系统、数据中台等。</li>
+                                <li>打造行为留痕、流程透明与数据驱动的运营体系。</li>
+                                <li>跨团队联动技术、业务、外部合作方推进复杂项目。</li>
+                                <li>推动底层数据与权限体系的结构化建设。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Job 2 -->
+                <div class="flex flex-col md:flex-row gap-6 md:gap-16 group">
+                    <div class="md:w-[180px] shrink-0 text-left md:text-right pt-1">
+                        <div class="text-white font-bold text-lg">2018 – 2019</div>
+                        <div class="text-text-muted text-sm mt-1">北京</div>
+                    </div>
+                    <div class="flex-1 relative">
+                        <div class="hidden md:block absolute -left-[41px] top-2 w-3 h-3 bg-card-bg border-2 border-gray-600 rounded-full z-10 group-hover:border-white transition-colors"></div>
+                        
+                        <div class="bg-card-bg p-6 rounded-lg border border-border-light hover:border-white/20 transition-all">
+                            <div class="flex flex-wrap justify-between items-baseline mb-3">
+                                <h3 class="text-xl font-bold text-white">高级产品经理</h3>
+                                <span class="text-sm text-text-muted">原始空气 (北京) 科技有限公司</span>
+                            </div>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="text-xs border border-white/10 px-2 py-0.5 rounded text-gray-400">交易系统</span>
+                                <span class="text-xs border border-white/10 px-2 py-0.5 rounded text-gray-400">风控合规</span>
+                                <span class="text-xs border border-white/10 px-2 py-0.5 rounded text-gray-400">用户增长</span>
+                            </div>
+                            <ul class="list-disc list-outside ml-4 space-y-2 text-sm text-gray-400 leading-relaxed">
+                                <li>设计差异化交易体验、资产管理与项目运营流程。</li>
+                                <li>支持 63+ 上线项目，全流程运营工具系统化。</li>
+                                <li>用户量突破 10 万，单日交易额峰值达 <strong class="text-white">63.74 亿</strong>。</li>
+                                <li>交易平台跻身行业 TOP3。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Job 3 -->
+                <div class="flex flex-col md:flex-row gap-6 md:gap-16 group">
+                    <div class="md:w-[180px] shrink-0 text-left md:text-right pt-1">
+                        <div class="text-gray-500 font-bold text-lg">2015 – 2017</div>
+                        <div class="text-text-muted text-sm mt-1">北京</div>
+                    </div>
+                    <div class="flex-1 relative">
+                        <div class="hidden md:block absolute -left-[41px] top-2 w-3 h-3 bg-card-bg border-2 border-gray-600 rounded-full z-10 group-hover:border-white transition-colors"></div>
+                        
+                        <div class="bg-card-bg p-6 rounded-lg border border-border-light hover:border-white/20 transition-all opacity-80 group-hover:opacity-100">
+                            <div class="flex flex-wrap justify-between items-baseline mb-3">
+                                <h3 class="text-xl font-bold text-white">产品经理</h3>
+                                <span class="text-sm text-text-muted">上海绿岸科技有限公司</span>
+                            </div>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="text-xs border border-white/10 px-2 py-0.5 rounded text-gray-400">游戏平台</span>
+                                <span class="text-xs border border-white/10 px-2 py-0.5 rounded text-gray-400">数据监控</span>
+                            </div>
+                            <ul class="list-disc list-outside ml-4 space-y-2 text-sm text-gray-400 leading-relaxed">
+                                <li>搭建测试平台、配置系统与运营工具。</li>
+                                <li>多轮测试覆盖用户 1.8 万+，首充转化率达 21%。</li>
+                                <li>用户留存提升 13%，显著增强活跃度。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Job 4 & 5 (Summary) -->
+                <div class="flex flex-col md:flex-row gap-6 md:gap-16">
+                    <div class="md:w-[180px] shrink-0 text-left md:text-right pt-1">
+                        <div class="text-gray-600 font-bold text-lg">早期经历</div>
+                    </div>
+                    <div class="flex-1 grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Job 4 -->
+                        <div class="bg-card-bg p-5 rounded-lg border border-border-light opacity-60 hover:opacity-100 transition-opacity">
+                            <div class="font-bold text-white mb-1">创业负责人 (2013-2015)</div>
+                            <div class="text-xs text-text-muted mb-3">聚爱玩网络</div>
+                            <p class="text-xs text-gray-400 leading-relaxed">
+                                从 0 构建 CMS、运营后台、数据平台、支付体系。推动 4 款产品同时上线 iOS/Android。
+                            </p>
+                        </div>
+                        <!-- Job 5 -->
+                        <div class="bg-card-bg p-5 rounded-lg border border-border-light opacity-60 hover:opacity-100 transition-opacity">
+                            <div class="font-bold text-white mb-1">产品经理 (2008-2013)</div>
+                            <div class="text-xs text-text-muted mb-3">金山软件</div>
+                            <p class="text-xs text-gray-400 leading-relaxed">
+                                2 个月上线公司首个页游平台，首月营收 26 万。设计跨平台内容体系，电子刊物打开率 60%。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
-      </div>
     </section>
 
-    <!-- Timeline -->
-    <section id="timeline">
-      <h2 class="section-title"><span>Timeline</span>简要历程</h2>
-      <div class="card">
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-year">2024 - 2025</div>
-            <div class="timeline-text">主导数字资产银行产品规划与落地，围绕数字身份与数据要素构建平台底座。</div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-year">2020 - 2023</div>
-            <div class="timeline-text">在医声医事负责商业化产品与数据平台，围绕医生服务打造工具链与数据能力。</div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-year">2018 - 2019</div>
-            <div class="timeline-text">构建数字资产交易平台，完成从 0 到 1 的产品验证与商业化突破。</div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-year">2008 - 2017</div>
-            <div class="timeline-text">在金山与创业公司搭建游戏平台与运营体系，积累 C 端与平台产品经验。</div>
-          </div>
+    <!-- SECTION 5: PROJECTS (项目集) -->
+    <section id="projects" class="bg-main-bg">
+        <div class="max-w-7xl mx-auto w-full">
+            <div class="mb-16 border-l-4 border-accent-blue pl-6 flex justify-between items-end">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-2">Featured Projects</h2>
+                    <p class="text-text-muted tracking-widest uppercase text-sm">精选案例</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Project 1 -->
+                <div class="bg-card-bg p-6 rounded-xl border border-border-light hover:border-accent-blue/40 transition-all hover:-translate-y-1 group flex flex-col h-full">
+                    <div class="text-accent-blue text-xs font-bold tracking-widest uppercase mb-3">SaaS / 协作</div>
+                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-accent-blue transition-colors">多角色业务触达与协作平台</h3>
+                    <p class="text-text-muted text-sm mb-6 flex-grow">
+                        为业务团队打造的一体化触达与协作平台，集成用户检索、在线会议、任务驱动、虚拟触达与行为记录。
+                    </p>
+                    
+                    <div class="border-t border-white/5 pt-4 mt-auto">
+                        <div class="mb-3">
+                            <span class="text-xs text-gray-500 block mb-1">My Role</span>
+                            <span class="text-xs text-white font-medium">0→1 产品 Owner，制定核心流程与多端能力</span>
+                        </div>
+                        <div class="bg-white/5 p-3 rounded text-xs text-gray-300 space-y-1">
+                            <div class="flex justify-between"><span>标准化触达</span><span class="text-white">300+ 团队成员</span></div>
+                            <div class="flex justify-between"><span>单次活动触达</span><span class="text-white">1000+ 用户</span></div>
+                            <div class="text-gray-500 pt-1">成果：行为留痕体系让流程实现“可审计、可追踪”。</div>
+                        </div>
+                        <button class="mt-4 w-full py-2 border border-white/10 text-xs text-white hover:bg-white hover:text-black transition-colors rounded">
+                            查看原型 (Mockups)
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-card-bg p-6 rounded-xl border border-border-light hover:border-accent-blue/40 transition-all hover:-translate-y-1 group flex flex-col h-full">
+                    <div class="text-accent-blue text-xs font-bold tracking-widest uppercase mb-3">Automation / 增长</div>
+                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-accent-blue transition-colors">外呼与运营自动化平台</h3>
+                    <p class="text-text-muted text-sm mb-6 flex-grow">
+                        构建任务驱动的外呼与自动化运营平台，实现触达链路数字化、响应捕获与线索评分。
+                    </p>
+                    
+                    <div class="border-t border-white/5 pt-4 mt-auto">
+                        <div class="mb-3">
+                            <span class="text-xs text-gray-500 block mb-1">My Role</span>
+                            <span class="text-xs text-white font-medium">产品负责人，设计任务模型与标签体系</span>
+                        </div>
+                        <div class="bg-white/5 p-3 rounded text-xs text-gray-300 space-y-1">
+                            <div class="flex justify-between"><span>完成外呼任务</span><span class="text-white">20 万+</span></div>
+                            <div class="flex justify-between"><span>意向转化率</span><span class="text-white">6% – 12%</span></div>
+                            <div class="text-gray-500 pt-1">成果：建立响应/偏好标签，为增长分层提供依据。</div>
+                        </div>
+                         <button class="mt-4 w-full py-2 border border-white/10 text-xs text-white hover:bg-white hover:text-black transition-colors rounded">
+                            查看原型 (Mockups)
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-card-bg p-6 rounded-xl border border-border-light hover:border-accent-blue/40 transition-all hover:-translate-y-1 group flex flex-col h-full">
+                    <div class="text-accent-blue text-xs font-bold tracking-widest uppercase mb-3">Data Visualization</div>
+                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-accent-blue transition-colors">画像与可视化分析中台</h3>
+                    <p class="text-text-muted text-sm mb-6 flex-grow">
+                        融合属性、行为、关系数据的多维画像与实时可视化分析平台。
+                    </p>
+                    
+                    <div class="border-t border-white/5 pt-4 mt-auto">
+                        <div class="mb-3">
+                            <span class="text-xs text-gray-500 block mb-1">My Role</span>
+                            <span class="text-xs text-white font-medium">画像体系与分析模块 Owner</span>
+                        </div>
+                        <div class="bg-white/5 p-3 rounded text-xs text-gray-300 space-y-1">
+                            <div>设计三维画像模型，覆盖用户/团队/项目多主体。</div>
+                            <div class="text-gray-500 pt-1">成果：打通埋点→清洗→分析→大屏链路，支持组件化大屏模板复用。</div>
+                        </div>
+                         <button class="mt-4 w-full py-2 border border-white/10 text-xs text-white hover:bg-white hover:text-black transition-colors rounded">
+                            查看原型 (Mockups)
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="bg-card-bg p-6 rounded-xl border border-border-light hover:border-accent-blue/40 transition-all hover:-translate-y-1 group flex flex-col h-full">
+                    <div class="text-accent-blue text-xs font-bold tracking-widest uppercase mb-3">Service Management</div>
+                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-accent-blue transition-colors">服务与用户管理平台</h3>
+                    <p class="text-text-muted text-sm mb-6 flex-grow">
+                         面向长期服务场景打造的用户管理与任务协同平台，实现服务过程标准化与数据沉淀。
+                    </p>
+                    
+                    <div class="border-t border-white/5 pt-4 mt-auto">
+                        <div class="mb-3">
+                            <span class="text-xs text-gray-500 block mb-1">My Role</span>
+                            <span class="text-xs text-white font-medium">流程 Owner，负责架构、模型设计、试点推进</span>
+                        </div>
+                        <div class="bg-white/5 p-3 rounded text-xs text-gray-300 space-y-1">
+                            <div>统一多个业务线的数据模型与流程标准。</div>
+                            <div class="text-gray-500 pt-1">成果：支持服务包、动态指标与多端协作，项目方案获行业立项认可。</div>
+                        </div>
+                         <button class="mt-4 w-full py-2 border border-white/10 text-xs text-white hover:bg-white hover:text-black transition-colors rounded">
+                            查看原型 (Mockups)
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="bg-card-bg p-6 rounded-xl border border-border-light hover:border-accent-blue/40 transition-all hover:-translate-y-1 group flex flex-col h-full">
+                    <div class="text-accent-blue text-xs font-bold tracking-widest uppercase mb-3">Blockchain / Web3</div>
+                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-accent-blue transition-colors">数字资产底层平台</h3>
+                    <p class="text-text-muted text-sm mb-6 flex-grow">
+                        构建“身份—权限—资产”一体化能力的数字资产底层平台。
+                    </p>
+                    
+                    <div class="border-t border-white/5 pt-4 mt-auto">
+                        <div class="mb-3">
+                            <span class="text-xs text-gray-500 block mb-1">My Role</span>
+                            <span class="text-xs text-white font-medium">顶层架构 Owner，跨国协作推进全系统搭建</span>
+                        </div>
+                        <div class="bg-white/5 p-3 rounded text-xs text-gray-300 space-y-1">
+                            <div>实现符合国际标准的数字身份体系。</div>
+                            <div class="text-gray-500 pt-1">成果：构建可审计、可监管的数据确权与流通机制，孵化多款上层应用。</div>
+                        </div>
+                         <button class="mt-4 w-full py-2 border border-white/10 text-xs text-white hover:bg-white hover:text-black transition-colors rounded">
+                            查看原型 (Mockups)
+                        </button>
+                    </div>
+                </div>
+
+            </div>
         </div>
-      </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact">
-      <h2 class="section-title"><span>Contact</span>联系我</h2>
-      <div class="card contact-card">
-        <div class="contact-main">
-          <p>
-            如果你正在寻找一位能够在复杂场景下搭建平台产品体系、
-            用数据驱动业务、并兼顾商业化与交付落地的产品负责人，
-            欢迎随时联系我。
-          </p>
-          <p>
-            我乐于参与大中型平台产品建设（数据中台、医生 / 用户服务平台、数据资产与开放平台等），
-            也愿意和团队一起在新业务中探索从 0 到 1 的路径。
-          </p>
-          <div class="hero-actions" style="margin-top:10px;">
-            <a class="btn btn-primary" href="mailto:86628180@qq.com">
-              发送邮件给我
-            </a>
-            <a class="btn btn-ghost" href="#top">
-              回到顶部
-            </a>
-          </div>
+    <!-- SECTION 6: CONTACT (联系我) -->
+    <section id="contact" class="bg-[#050505]">
+        <div class="max-w-4xl mx-auto text-center w-full fade-up">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-8">
+                让我们一起打造<br>
+                <span class="text-accent-blue">下一个高潜力的产品</span>。
+            </h2>
+            
+            <p class="text-xl text-text-muted mb-12 font-light">
+                正在寻求平台型产品、数据产品、商业化方向的机会，<br>
+                欢迎交流更多项目细节。
+            </p>
+
+            <div class="flex flex-col md:flex-row justify-center gap-6">
+                <a href="mailto:86628180@qq.com" class="px-10 py-4 bg-white text-black rounded-full font-bold hover:bg-gray-200 transition-colors shadow-xl shadow-white/10 flex items-center justify-center gap-3">
+                    <i class="fa-regular fa-envelope"></i> 86628180@qq.com
+                </a>
+                <a href="tel:13311505223" class="px-10 py-4 border border-white/20 text-white rounded-full font-bold hover:bg-white/10 transition-colors flex items-center justify-center gap-3">
+                    <i class="fa-solid fa-phone"></i> 133 1150 5223
+                </a>
+            </div>
+
+            <footer class="mt-24 text-xs text-gray-600">
+                <p>&copy; 2025 Sun Hongtao. Built with Product Thinking.</p>
+            </footer>
         </div>
-        <div>
-          <div class="contact-label">Email</div>
-          <div class="contact-value">86628180@qq.com</div>
-          <div class="contact-label" style="margin-top:10px;">Location</div>
-          <div class="contact-value">Beijing · Open to remote / relocation</div>
-          <div class="contact-label" style="margin-top:10px;">GitHub</div>
-          <div class="contact-value">
-            <!-- 替换为你的 GitHub 用户名 -->
-            <a href="https://github.com/" target="_blank" rel="noopener">github.com/your-github-id</a>
-          </div>
-        </div>
-      </div>
     </section>
-  </main>
 
-  <footer>
-    © <span id="year"></span> Sun Hongtao · Designed for GitHub Pages
-  </footer>
-</div>
-
-<script>
-  // 更新年份
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
 </body>
 </html>
