@@ -188,260 +188,100 @@
         </a>
     </section>
 
-    <!-- SECTION 3: SKILLS (核心能力) -->
-    <section id="skills" class="min-h-screen flex flex-col justify-center py-20 border-t border-border-light relative">
-        <!-- 装饰背景 -->
+    <!-- SECTION 2: CORE COMPETENCIES (核心能力) -->
+    <section id="core-competencies"
+        class="min-h-screen flex flex-col justify-center py-24 bg-[#050505] relative overflow-hidden group/section border-t border-white/5">
+
+        <!-- 背景装饰 (可选，复用 Skills 的光晕或添加新的) -->
         <div
-            class="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-900/10 blur-[100px] pointer-events-none rounded-full">
+            class="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-900/10 blur-[100px] pointer-events-none rounded-full">
         </div>
 
-        <div class="max-w-7xl mx-auto px-6 w-full relative z-10">
-            <div class="mb-16 md:mb-24 flex items-end justify-between border-b border-white/10 pb-6 reveal">
-                <div>
-                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-2">Core Competencies</h2>
-                    <p class="text-text-muted tracking-widest uppercase text-xs">核心能力架构</p>
+        <!-- 1. Section Header (标题区) -->
+        <div class="max-w-7xl mx-auto px-6 mb-20 text-center relative z-10 reveal">
+            <h2 class="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight leading-tight">
+                不只是管理产品，<br class="hidden md:block" />
+                更是在设计<span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">商业系统</span>
+            </h2>
+            <p class="text-xl text-gray-400 font-light max-w-2xl mx-auto leading-relaxed">
+                从复杂业务中抽象结构，用产品驱动增长，并确保结果真正落地。
+            </p>
+        </div>
+
+        <!-- 2. Grid Cards Layout (核心内容区) -->
+        <div class="max-w-7xl mx-auto px-6 w-full grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
+
+            <!-- Card 1: 复杂业务抽象 (The Architect) -->
+            <div
+                class="bg-[#0f0f0f] p-8 rounded-2xl border border-white/5 shadow-lg hover:shadow-2xl hover:border-white/10 hover:-translate-y-2 transition-all duration-300 relative overflow-hidden group reveal delay-100">
+                <!-- 视觉暗示: 网格纹理 (Dark Mode: White low opacity) -->
+                <div
+                    class="absolute inset-0 bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:24px_24px] opacity-[0.03] group-hover:opacity-[0.06] transition-opacity">
                 </div>
-                <div class="hidden md:block text-right text-text-muted text-sm">
-                    Product / Tools / Soft Skills
+
+                <div class="relative z-10">
+                    <div
+                        class="w-14 h-14 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white mb-8 group-hover:scale-110 transition-transform duration-300 group-hover:bg-white/10">
+                        <i class="fa-solid fa-layer-group text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">复杂业务抽象<br><span
+                            class="text-base font-medium text-gray-500">The Architect</span></h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        在多角色、多约束的复杂业务环境中，将不清晰的问题抽象为可扩展、可演进的平台型产品结构。
+                    </p>
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-
-                <!-- 1. Product Skills -->
+            <!-- Card 2: 商业化增长 (The Strategist) -->
+            <div
+                class="bg-[#0f0f0f] p-8 rounded-2xl border border-white/5 shadow-lg hover:shadow-2xl hover:border-white/10 hover:-translate-y-2 transition-all duration-300 relative overflow-hidden group reveal delay-200">
+                <!-- 视觉暗示: 抽象图表装饰 -->
                 <div
-                    class="bg-card-bg p-8 rounded-2xl border border-white/5 hover:border-accent-blue/30 transition-all hover:-translate-y-1 group reveal delay-100">
-                    <div class="flex items-center gap-4 mb-8">
-                        <div
-                            class="w-12 h-12 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-400 group-hover:bg-blue-500 group-hover:text-white transition-all shadow-lg shadow-blue-500/0 group-hover:shadow-blue-500/20">
-                            <i class="fa-solid fa-compass-drafting text-xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-white">产品技能</h3>
-                    </div>
-                    <ul class="space-y-4 text-text-muted text-sm">
-                        <li class="flex items-center gap-3"><span
-                                class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>需求拆解与机会判断</li>
-                        <li class="flex items-center gap-3"><span
-                                class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>复杂业务抽象</li>
-                        <li class="flex items-center gap-3"><span
-                                class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>PRD / 用户故事 / Use Cases</li>
-                        <li class="flex items-center gap-3"><span
-                                class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>中后台架构 & 能力规划</li>
-                        <li class="flex items-center gap-3"><span
-                                class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>指标体系设计（埋点/漏斗）</li>
-                        <li class="flex items-center gap-3"><span
-                                class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>A/B 实验与增长模型</li>
-                        <li class="flex items-center gap-3"><span
-                                class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>商业化场景设计</li>
-                    </ul>
+                    class="absolute -right-4 -top-4 text-white opacity-[0.02] group-hover:opacity-[0.05] transition-opacity transform rotate-12 scale-150 pointer-events-none">
+                    <i class="fa-solid fa-chart-line text-9xl"></i>
                 </div>
 
-                <!-- 2. Tool Stack -->
-                <div
-                    class="bg-card-bg p-8 rounded-2xl border border-white/5 hover:border-accent-blue/30 transition-all hover:-translate-y-1 group reveal delay-200">
-                    <div class="flex items-center gap-4 mb-8">
-                        <div
-                            class="w-12 h-12 rounded-full bg-purple-500/10 flex items-center justify-center text-purple-400 group-hover:bg-purple-500 group-hover:text-white transition-all shadow-lg shadow-purple-500/0 group-hover:shadow-purple-500/20">
-                            <i class="fa-solid fa-layer-group text-xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-white">工具栈</h3>
+                <div class="relative z-10">
+                    <div
+                        class="w-14 h-14 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 mb-8 group-hover:scale-110 transition-transform duration-300 group-hover:bg-blue-500/20">
+                        <i class="fa-solid fa-chart-line text-2xl"></i>
                     </div>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="tag-cloud-item">Figma</span>
-                        <span class="tag-cloud-item">Axure</span>
-                        <span class="tag-cloud-item">Mockplus</span>
-                        <span class="tag-cloud-item">SQL (MySQL)</span>
-                        <span class="tag-cloud-item">Power BI</span>
-                        <span class="tag-cloud-item">Jira</span>
-                        <span class="tag-cloud-item">Confluence</span>
-                        <span class="tag-cloud-item">Notion</span>
-                        <span class="tag-cloud-item">Git Flow</span>
-                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">商业化增长<br><span
+                            class="text-base font-medium text-gray-500">The Strategist</span></h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        以业务目标为导向进行产品设计，通过机制与数据驱动增长路径，而非停留在功能交付层面。
+                    </p>
                 </div>
-
-                <!-- 3. Soft Skills -->
-                <div
-                    class="bg-card-bg p-8 rounded-2xl border border-white/5 hover:border-accent-blue/30 transition-all hover:-translate-y-1 group reveal delay-300">
-                    <div class="flex items-center gap-4 mb-8">
-                        <div
-                            class="w-12 h-12 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-400 group-hover:bg-emerald-500 group-hover:text-white transition-all shadow-lg shadow-emerald-500/0 group-hover:shadow-emerald-500/20">
-                            <i class="fa-solid fa-users-gear text-xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-white">软技能</h3>
-                    </div>
-                    <ul class="space-y-4 text-text-muted text-sm">
-                        <li class="flex items-center gap-3"><span
-                                class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>结构化沟通</li>
-                        <li class="flex items-center gap-3"><span
-                                class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>多团队 / 多角色协同</li>
-                        <li class="flex items-center gap-3"><span
-                                class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>决策推动 & 风险识别</li>
-                        <li class="flex items-center gap-3"><span
-                                class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>复杂场景抽象能力</li>
-                        <li class="flex items-center gap-3"><span
-                                class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>大型项目推进</li>
-                        <li class="flex items-center gap-3"><span
-                                class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>从 0 到 1 创新落地</li>
-                    </ul>
-                </div>
-
             </div>
+
+            <!-- Card 3: 0→1 落地 (The Executor) -->
+            <div
+                class="bg-[#0f0f0f] p-8 rounded-2xl border border-white/5 shadow-lg hover:shadow-2xl hover:border-white/10 hover:-translate-y-2 transition-all duration-300 relative overflow-hidden group reveal delay-300">
+                <!-- 视觉暗示: 落地/冲击波纹 -->
+                <div
+                    class="absolute bottom-0 right-0 w-32 h-32 bg-indigo-900/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 translate-x-10 translate-y-10">
+                </div>
+
+                <div class="relative z-10">
+                    <div
+                        class="w-14 h-14 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 mb-8 group-hover:scale-110 transition-transform duration-300 group-hover:bg-indigo-500/20">
+                        <i class="fa-solid fa-rocket text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">0→1 产品落地<br><span
+                            class="text-base font-medium text-gray-500">The Executor</span></h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        在高度不确定与资源受限的条件下，推动产品从概念走向真实使用场景，并产生业务价值。
+                    </p>
+                </div>
+            </div>
+
         </div>
+
+        <!-- 装饰: 底部渐变连接 (已移除，Dark mode下可能不需要太强的白渐变，或者改为黑渐变) -->
+        <!-- <div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-[#050505] to-transparent pointer-events-none"></div> -->
+
     </section>
-
-    <!-- SECTION 4: EXPERIENCE (工作经历) -->
-    <section id="experience"
-        class="min-h-screen flex flex-col justify-center bg-[#080808] py-20 border-t border-border-light">
-        <div class="max-w-6xl mx-auto px-6 w-full">
-            <div class="mb-16 md:mb-20 flex items-end justify-between border-b border-white/10 pb-6 reveal">
-                <div>
-                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-2">Experience</h2>
-                    <p class="text-text-muted tracking-widest uppercase text-xs">职业生涯轨迹</p>
-                </div>
-            </div>
-
-            <!-- 时间轴容器 -->
-            <div class="relative space-y-12">
-                <!-- 垂直线 (PC显示) -->
-                <div
-                    class="hidden md:block absolute left-[180px] top-4 bottom-10 w-px bg-gradient-to-b from-blue-500 via-white/10 to-transparent">
-                </div>
-
-                <!-- Job 1 -->
-                <div class="flex flex-col md:flex-row gap-6 md:gap-16 group reveal delay-100">
-                    <div class="md:w-[180px] shrink-0 text-left md:text-right pt-1">
-                        <div class="text-accent-blue font-bold text-lg">2020 – 至今</div>
-                        <div class="text-text-muted text-xs uppercase tracking-wider mt-1">Beijing</div>
-                    </div>
-                    <div class="flex-1 relative">
-                        <!-- 装饰点 -->
-                        <div
-                            class="hidden md:block absolute -left-[41px] top-2.5 w-3 h-3 bg-main-bg border-2 border-accent-blue rounded-full z-10 shadow-[0_0_10px_rgba(59,130,246,0.5)]">
-                        </div>
-
-                        <div
-                            class="bg-card-bg p-6 md:p-8 rounded-xl border border-white/5 hover:border-white/20 transition-all hover:bg-[#111]">
-                            <div class="flex flex-wrap justify-between items-baseline mb-4">
-                                <h3 class="text-xl font-bold text-white">商业化产品经理</h3>
-                                <span class="text-sm text-text-muted">医声医事 (北京) 科技有限公司</span>
-                            </div>
-                            <!-- Tags -->
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                <span
-                                    class="text-xs border border-white/10 bg-white/5 px-2 py-1 rounded text-gray-300">平台产品</span>
-                                <span
-                                    class="text-xs border border-white/10 bg-white/5 px-2 py-1 rounded text-gray-300">商业化体系</span>
-                                <span
-                                    class="text-xs border border-white/10 bg-white/5 px-2 py-1 rounded text-gray-300">数据产品</span>
-                            </div>
-                            <ul class="list-disc list-outside ml-4 space-y-3 text-sm text-gray-400 leading-relaxed">
-                                <li>规划商业化工具链，构建多个模块化产品，提升营收与客户复用率。</li>
-                                <li>主导多个 0→1 产品，如触达平台、外呼系统、数据中台等。</li>
-                                <li>打造行为留痕、流程透明与数据驱动的运营体系。</li>
-                                <li>跨团队联动技术、业务、外部合作方推进复杂项目。</li>
-                                <li>推动底层数据与权限体系的结构化建设。</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Job 2 -->
-                <div class="flex flex-col md:flex-row gap-6 md:gap-16 group reveal delay-200">
-                    <div class="md:w-[180px] shrink-0 text-left md:text-right pt-1">
-                        <div class="text-white font-bold text-lg">2018 – 2019</div>
-                        <div class="text-text-muted text-xs uppercase tracking-wider mt-1">Beijing</div>
-                    </div>
-                    <div class="flex-1 relative">
-                        <div
-                            class="hidden md:block absolute -left-[41px] top-2.5 w-3 h-3 bg-main-bg border-2 border-gray-600 rounded-full z-10 group-hover:border-white transition-colors">
-                        </div>
-
-                        <div
-                            class="bg-card-bg p-6 md:p-8 rounded-xl border border-white/5 hover:border-white/20 transition-all hover:bg-[#111]">
-                            <div class="flex flex-wrap justify-between items-baseline mb-4">
-                                <h3 class="text-xl font-bold text-white">高级产品经理</h3>
-                                <span class="text-sm text-text-muted">原始空气 (北京) 科技有限公司</span>
-                            </div>
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                <span
-                                    class="text-xs border border-white/10 bg-white/5 px-2 py-1 rounded text-gray-300">交易系统</span>
-                                <span
-                                    class="text-xs border border-white/10 bg-white/5 px-2 py-1 rounded text-gray-300">风控合规</span>
-                                <span
-                                    class="text-xs border border-white/10 bg-white/5 px-2 py-1 rounded text-gray-300">用户增长</span>
-                            </div>
-                            <ul class="list-disc list-outside ml-4 space-y-3 text-sm text-gray-400 leading-relaxed">
-                                <li>设计差异化交易体验、资产管理与项目运营流程。</li>
-                                <li>支持 63+ 上线项目，全流程运营工具系统化。</li>
-                                <li>用户量突破 10 万，单日交易额峰值达 <strong class="text-white">63.74 亿</strong>。</li>
-                                <li>交易平台跻身行业 TOP3。</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Job 3 -->
-                <div class="flex flex-col md:flex-row gap-6 md:gap-16 group reveal delay-300">
-                    <div class="md:w-[180px] shrink-0 text-left md:text-right pt-1">
-                        <div class="text-gray-500 font-bold text-lg">2015 – 2017</div>
-                        <div class="text-text-muted text-xs uppercase tracking-wider mt-1">Beijing</div>
-                    </div>
-                    <div class="flex-1 relative">
-                        <div
-                            class="hidden md:block absolute -left-[41px] top-2.5 w-3 h-3 bg-main-bg border-2 border-gray-600 rounded-full z-10 group-hover:border-white transition-colors">
-                        </div>
-
-                        <div
-                            class="bg-card-bg p-6 md:p-8 rounded-xl border border-white/5 hover:border-white/20 transition-all opacity-80 group-hover:opacity-100">
-                            <div class="flex flex-wrap justify-between items-baseline mb-4">
-                                <h3 class="text-xl font-bold text-white">产品经理</h3>
-                                <span class="text-sm text-text-muted">上海绿岸科技有限公司</span>
-                            </div>
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                <span
-                                    class="text-xs border border-white/10 bg-white/5 px-2 py-1 rounded text-gray-300">游戏平台</span>
-                                <span
-                                    class="text-xs border border-white/10 bg-white/5 px-2 py-1 rounded text-gray-300">数据监控</span>
-                            </div>
-                            <ul class="list-disc list-outside ml-4 space-y-3 text-sm text-gray-400 leading-relaxed">
-                                <li>搭建测试平台、配置系统与运营工具。</li>
-                                <li>多轮测试覆盖用户 1.8 万+，首充转化率达 21%。</li>
-                                <li>用户留存提升 13%，显著增强活跃度。</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Job 4 & 5 (Summary) -->
-                <div class="flex flex-col md:flex-row gap-6 md:gap-16 reveal delay-300">
-                    <div class="md:w-[180px] shrink-0 text-left md:text-right pt-1">
-                        <div class="text-gray-600 font-bold text-lg">早期经历</div>
-                    </div>
-                    <div class="flex-1 grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <!-- Job 4 -->
-                        <div
-                            class="bg-card-bg p-6 rounded-xl border border-white/5 opacity-60 hover:opacity-100 transition-opacity">
-                            <div class="font-bold text-white mb-1">创业负责人 (2013-2015)</div>
-                            <div class="text-xs text-text-muted mb-3">聚爱玩网络</div>
-                            <p class="text-xs text-gray-400 leading-relaxed">
-                                从 0 构建 CMS、运营后台、数据平台、支付体系。推动 4 款产品同时上线 iOS/Android。
-                            </p>
-                        </div>
-                        <!-- Job 5 -->
-                        <div
-                            class="bg-card-bg p-6 rounded-xl border border-white/5 opacity-60 hover:opacity-100 transition-opacity">
-                            <div class="font-bold text-white mb-1">产品经理 (2008-2013)</div>
-                            <div class="text-xs text-text-muted mb-3">金山软件</div>
-                            <p class="text-xs text-gray-400 leading-relaxed">
-                                2 个月上线公司首个页游平台，首月营收 26 万。设计跨平台内容体系，电子刊物打开率 60%。
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- SECTION 5: PROJECTS (项目集) -->
     <section id="projects"
         class="min-h-screen flex flex-col justify-center py-20 border-t border-border-light relative">
@@ -599,6 +439,159 @@
                     </div>
                 </div>
 
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: EXPERIENCE (工作经历) -->
+    <section id="experience"
+        class="min-h-screen flex flex-col justify-center bg-[#080808] py-20 border-t border-border-light">
+        <div class="max-w-6xl mx-auto px-6 w-full">
+            <div class="mb-16 md:mb-20 flex items-end justify-between border-b border-white/10 pb-6 reveal">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-2">Experience</h2>
+                    <p class="text-text-muted tracking-widest uppercase text-xs">职业生涯轨迹</p>
+                </div>
+            </div>
+
+            <!-- 时间轴容器 -->
+            <div class="relative space-y-12">
+                <!-- 垂直线 (PC显示) -->
+                <div
+                    class="hidden md:block absolute left-[180px] top-4 bottom-10 w-px bg-gradient-to-b from-blue-500 via-white/10 to-transparent">
+                </div>
+
+                <!-- Job 1 -->
+                <div class="flex flex-col md:flex-row gap-6 md:gap-16 group reveal delay-100">
+                    <div class="md:w-[180px] shrink-0 text-left md:text-right pt-1">
+                        <div class="text-accent-blue font-bold text-lg">2020 – 至今</div>
+                        <div class="text-text-muted text-xs uppercase tracking-wider mt-1">Beijing</div>
+                    </div>
+                    <div class="flex-1 relative">
+                        <!-- 装饰点 -->
+                        <div
+                            class="hidden md:block absolute -left-[41px] top-2.5 w-3 h-3 bg-main-bg border-2 border-accent-blue rounded-full z-10 shadow-[0_0_10px_rgba(59,130,246,0.5)]">
+                        </div>
+
+                        <div
+                            class="bg-card-bg p-6 md:p-8 rounded-xl border border-white/5 hover:border-white/20 transition-all hover:bg-[#111]">
+                            <div class="flex flex-wrap justify-between items-baseline mb-4">
+                                <h3 class="text-xl font-bold text-white">商业化产品经理</h3>
+                                <span class="text-sm text-text-muted">医声医事 (北京) 科技有限公司</span>
+                            </div>
+                            <!-- Tags -->
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span
+                                    class="text-xs border border-white/10 bg-white/5 px-2 py-1 rounded text-gray-300">平台产品</span>
+                                <span
+                                    class="text-xs border border-white/10 bg-white/5 px-2 py-1 rounded text-gray-300">商业化体系</span>
+                                <span
+                                    class="text-xs border border-white/10 bg-white/5 px-2 py-1 rounded text-gray-300">数据产品</span>
+                            </div>
+                            <ul class="list-disc list-outside ml-4 space-y-3 text-sm text-gray-400 leading-relaxed">
+                                <li>规划商业化工具链，构建多个模块化产品，提升营收与客户复用率。</li>
+                                <li>主导多个 0→1 产品，如触达平台、外呼系统、数据中台等。</li>
+                                <li>打造行为留痕、流程透明与数据驱动的运营体系。</li>
+                                <li>跨团队联动技术、业务、外部合作方推进复杂项目。</li>
+                                <li>推动底层数据与权限体系的结构化建设。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Job 2 -->
+                <div class="flex flex-col md:flex-row gap-6 md:gap-16 group reveal delay-200">
+                    <div class="md:w-[180px] shrink-0 text-left md:text-right pt-1">
+                        <div class="text-white font-bold text-lg">2018 – 2019</div>
+                        <div class="text-text-muted text-xs uppercase tracking-wider mt-1">Beijing</div>
+                    </div>
+                    <div class="flex-1 relative">
+                        <div
+                            class="hidden md:block absolute -left-[41px] top-2.5 w-3 h-3 bg-main-bg border-2 border-gray-600 rounded-full z-10 group-hover:border-white transition-colors">
+                        </div>
+
+                        <div
+                            class="bg-card-bg p-6 md:p-8 rounded-xl border border-white/5 hover:border-white/20 transition-all hover:bg-[#111]">
+                            <div class="flex flex-wrap justify-between items-baseline mb-4">
+                                <h3 class="text-xl font-bold text-white">高级产品经理</h3>
+                                <span class="text-sm text-text-muted">原始空气 (北京) 科技有限公司</span>
+                            </div>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span
+                                    class="text-xs border border-white/10 bg-white/5 px-2 py-1 rounded text-gray-300">交易系统</span>
+                                <span
+                                    class="text-xs border border-white/10 bg-white/5 px-2 py-1 rounded text-gray-300">风控合规</span>
+                                <span
+                                    class="text-xs border border-white/10 bg-white/5 px-2 py-1 rounded text-gray-300">用户增长</span>
+                            </div>
+                            <ul class="list-disc list-outside ml-4 space-y-3 text-sm text-gray-400 leading-relaxed">
+                                <li>设计差异化交易体验、资产管理与项目运营流程。</li>
+                                <li>支持 63+ 上线项目，全流程运营工具系统化。</li>
+                                <li>用户量突破 10 万，单日交易额峰值达 <strong class="text-white">63.74 亿</strong>。</li>
+                                <li>交易平台跻身行业 TOP3。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Job 3 -->
+                <div class="flex flex-col md:flex-row gap-6 md:gap-16 group reveal delay-300">
+                    <div class="md:w-[180px] shrink-0 text-left md:text-right pt-1">
+                        <div class="text-gray-500 font-bold text-lg">2015 – 2017</div>
+                        <div class="text-text-muted text-xs uppercase tracking-wider mt-1">Beijing</div>
+                    </div>
+                    <div class="flex-1 relative">
+                        <div
+                            class="hidden md:block absolute -left-[41px] top-2.5 w-3 h-3 bg-main-bg border-2 border-gray-600 rounded-full z-10 group-hover:border-white transition-colors">
+                        </div>
+
+                        <div
+                            class="bg-card-bg p-6 md:p-8 rounded-xl border border-white/5 hover:border-white/20 transition-all opacity-80 group-hover:opacity-100">
+                            <div class="flex flex-wrap justify-between items-baseline mb-4">
+                                <h3 class="text-xl font-bold text-white">产品经理</h3>
+                                <span class="text-sm text-text-muted">上海绿岸科技有限公司</span>
+                            </div>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span
+                                    class="text-xs border border-white/10 bg-white/5 px-2 py-1 rounded text-gray-300">游戏平台</span>
+                                <span
+                                    class="text-xs border border-white/10 bg-white/5 px-2 py-1 rounded text-gray-300">数据监控</span>
+                            </div>
+                            <ul class="list-disc list-outside ml-4 space-y-3 text-sm text-gray-400 leading-relaxed">
+                                <li>搭建测试平台、配置系统与运营工具。</li>
+                                <li>多轮测试覆盖用户 1.8 万+，首充转化率达 21%。</li>
+                                <li>用户留存提升 13%，显著增强活跃度。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Job 4 & 5 (Summary) -->
+                <div class="flex flex-col md:flex-row gap-6 md:gap-16 reveal delay-300">
+                    <div class="md:w-[180px] shrink-0 text-left md:text-right pt-1">
+                        <div class="text-gray-600 font-bold text-lg">早期经历</div>
+                    </div>
+                    <div class="flex-1 grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Job 4 -->
+                        <div
+                            class="bg-card-bg p-6 rounded-xl border border-white/5 opacity-60 hover:opacity-100 transition-opacity">
+                            <div class="font-bold text-white mb-1">创业负责人 (2013-2015)</div>
+                            <div class="text-xs text-text-muted mb-3">聚爱玩网络</div>
+                            <p class="text-xs text-gray-400 leading-relaxed">
+                                从 0 构建 CMS、运营后台、数据平台、支付体系。推动 4 款产品同时上线 iOS/Android。
+                            </p>
+                        </div>
+                        <!-- Job 5 -->
+                        <div
+                            class="bg-card-bg p-6 rounded-xl border border-white/5 opacity-60 hover:opacity-100 transition-opacity">
+                            <div class="font-bold text-white mb-1">产品经理 (2008-2013)</div>
+                            <div class="text-xs text-text-muted mb-3">金山软件</div>
+                            <p class="text-xs text-gray-400 leading-relaxed">
+                                2 个月上线公司首个页游平台，首月营收 26 万。设计跨平台内容体系，电子刊物打开率 60%。
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
