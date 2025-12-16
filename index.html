@@ -28,7 +28,7 @@
 
             <!-- Desktop Menu -->
             <nav class="hidden md:flex space-x-10 text-xs font-medium tracking-widest text-text-muted">
-                <a href="#skills" class="nav-link hover:text-white transition-colors uppercase">核心能力</a>
+                <a href="#core-competencies" class="nav-link hover:text-white transition-colors uppercase">核心能力</a>
                 <a href="#projects" class="nav-link hover:text-white transition-colors uppercase">项目集</a>
                 <a href="#experience" class="nav-link hover:text-white transition-colors uppercase">工作经历</a>
                 <a href="#contact" class="nav-link hover:text-white transition-colors uppercase">联系方式</a>
@@ -182,7 +182,7 @@
         </div>
 
         <!-- 向下滚动提示 -->
-        <a href="#about"
+        <a href="#core-competencies"
             class="absolute bottom-10 left-1/2 -translate-x-1/2 text-text-muted/30 hover:text-white transition-colors animate-bounce cursor-pointer">
             <i class="fa-solid fa-chevron-down text-xl"></i>
         </a>
@@ -282,162 +282,209 @@
         <!-- <div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-[#050505] to-transparent pointer-events-none"></div> -->
 
     </section>
-    <!-- SECTION 5: PROJECTS (项目集) -->
-    <section id="projects"
-        class="min-h-screen flex flex-col justify-center py-20 border-t border-border-light relative">
-        <!-- 装饰 -->
+    <!-- SECTION 3: PROJECTS (项目集) -->
+    <section id="projects" class="py-24 bg-[#0B0F19] relative overflow-hidden border-t border-white/5">
+
+        <!-- 背景装饰 -->
         <div
-            class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-purple-900/10 blur-[120px] pointer-events-none rounded-full">
+            class="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-900/10 blur-[120px] pointer-events-none rounded-full opacity-50">
+        </div>
+        <div
+            class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-purple-900/10 blur-[120px] pointer-events-none rounded-full opacity-50">
         </div>
 
         <div class="max-w-7xl mx-auto px-6 w-full relative z-10">
-            <div class="mb-16 md:mb-20 flex items-end justify-between border-b border-white/10 pb-6 reveal">
+            <!-- Header -->
+            <div class="mb-20 flex items-end justify-between border-b border-white/5 pb-8 reveal">
                 <div>
-                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-2">Featured Projects</h2>
-                    <p class="text-text-muted tracking-widest uppercase text-xs">精选案例</p>
+                    <h2 class="text-3xl md:text-5xl font-bold text-white mb-4 tracking-tight">Featured Projects</h2>
+                    <p class="text-gray-500 tracking-widest uppercase text-xs font-medium">商业化 · 数据 · 增长</p>
                 </div>
             </div>
 
+            <!-- Bento Grid Layout -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-                <!-- Project 1 -->
-                <div
-                    class="bg-card-bg p-6 lg:p-8 rounded-2xl border border-white/5 hover:border-accent-blue/40 transition-all hover:-translate-y-2 group flex flex-col h-full reveal delay-100">
-                    <div class="text-accent-blue text-xs font-bold tracking-widest uppercase mb-4">SaaS / 协作</div>
-                    <h3 class="text-xl font-bold text-white mb-4 group-hover:text-accent-blue transition-colors">
-                        多角色业务触达与协作平台</h3>
-                    <p class="text-text-muted text-sm mb-8 flex-grow leading-relaxed">
-                        为业务团队打造的一体化触达与协作平台，集成用户检索、在线会议、任务驱动、虚拟触达与行为记录。
-                    </p>
-
-                    <div class="border-t border-white/5 pt-5 mt-auto">
-                        <div class="mb-4">
-                            <span class="text-xs text-gray-500 block mb-1 uppercase tracking-wider">My Role</span>
-                            <span class="text-sm text-white font-medium">0→1 产品 Owner，制定核心流程</span>
-                        </div>
-                        <div class="bg-white/5 p-4 rounded-lg text-xs text-gray-300 space-y-2">
-                            <div class="flex justify-between"><span>标准化触达</span><span class="text-white font-mono">300+
-                                    团队</span></div>
-                            <div class="flex justify-between"><span>单次触达</span><span class="text-white font-mono">1000+
-                                    用户</span></div>
-                            <div class="text-gray-500 pt-1 border-t border-white/5 mt-2">成果：行为留痕体系实现流程“可审计”。</div>
-                        </div>
-                        <button
-                            class="mt-5 w-full py-2.5 border border-white/10 text-xs text-white hover:bg-white hover:text-black transition-colors rounded-lg font-medium">
-                            查看原型 (Mockups)
-                        </button>
+                <!-- Card 1 (Hero Card) - 学术助理 App -->
+                <a href="https://app.mockplus.cn/p/yUQcVdORk" target="_blank"
+                    class="lg:col-span-2 group relative overflow-hidden rounded-3xl border border-white/10 bg-slate-900/50 p-8 hover:border-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-1 transition-all duration-300 backdrop-blur-sm reveal delay-100 flex flex-col justify-between min-h-[360px]">
+                    <!-- Decor 1: Glow Orb -->
+                    <div
+                        class="absolute -top-24 -right-24 w-64 h-64 bg-blue-500/20 blur-[80px] rounded-full pointer-events-none group-hover:bg-blue-500/30 transition-colors">
                     </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div
-                    class="bg-card-bg p-6 lg:p-8 rounded-2xl border border-white/5 hover:border-accent-blue/40 transition-all hover:-translate-y-2 group flex flex-col h-full reveal delay-200">
-                    <div class="text-accent-blue text-xs font-bold tracking-widest uppercase mb-4">Automation / 增长</div>
-                    <h3 class="text-xl font-bold text-white mb-4 group-hover:text-accent-blue transition-colors">
-                        外呼与运营自动化平台</h3>
-                    <p class="text-text-muted text-sm mb-8 flex-grow leading-relaxed">
-                        构建任务驱动的外呼与自动化运营平台，实现触达链路数字化、响应捕获与线索评分。
-                    </p>
-
-                    <div class="border-t border-white/5 pt-5 mt-auto">
-                        <div class="mb-4">
-                            <span class="text-xs text-gray-500 block mb-1 uppercase tracking-wider">My Role</span>
-                            <span class="text-sm text-white font-medium">产品负责人，设计任务模型</span>
-                        </div>
-                        <div class="bg-white/5 p-4 rounded-lg text-xs text-gray-300 space-y-2">
-                            <div class="flex justify-between"><span>完成外呼</span><span class="text-white font-mono">20w+
-                                    任务</span></div>
-                            <div class="flex justify-between"><span>转化率</span><span class="text-white font-mono">6% –
-                                    12%</span></div>
-                            <div class="text-gray-500 pt-1 border-t border-white/5 mt-2">成果：建立响应标签，支持增长分层。</div>
-                        </div>
-                        <button
-                            class="mt-5 w-full py-2.5 border border-white/10 text-xs text-white hover:bg-white hover:text-black transition-colors rounded-lg font-medium">
-                            查看原型 (Mockups)
-                        </button>
+                    <!-- Decor 2: Watermark Icon -->
+                    <div
+                        class="absolute -right-6 -bottom-6 text-white opacity-[0.05] group-hover:opacity-[0.1] transition-opacity rotate-12 pointer-events-none scale-150">
+                        <i class="fa-solid fa-user-doctor text-9xl"></i>
                     </div>
-                </div>
 
-                <!-- Project 3 -->
-                <div
-                    class="bg-card-bg p-6 lg:p-8 rounded-2xl border border-white/5 hover:border-accent-blue/40 transition-all hover:-translate-y-2 group flex flex-col h-full reveal delay-300">
-                    <div class="text-accent-blue text-xs font-bold tracking-widest uppercase mb-4">Data Visualization
+                    <div class="relative z-10">
+                        <div class="flex justify-between items-start">
+                            <div
+                                class="inline-flex items-center px-3 py-1 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-xs font-medium mb-6">
+                                B2B / 合规数字化
+                            </div>
+                            <div
+                                class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-white/50 group-hover:bg-blue-500 group-hover:text-white transition-all duration-300">
+                                <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-3xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors">学术助理
+                            App</h3>
+                        <p class="text-gray-400 leading-relaxed max-w-2xl mb-8">
+                            0到1主导的药企代表客情管理平台。构建“精准检索-虚拟拜访-合规留痕”闭环，将合规监管从“事后查验”升级为“过程留痕”。
+                        </p>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-4 group-hover:text-accent-blue transition-colors">
-                        画像与可视化分析中台</h3>
-                    <p class="text-text-muted text-sm mb-8 flex-grow leading-relaxed">
-                        融合属性、行为、关系数据的多维画像与实时可视化分析平台。
-                    </p>
+                    <div class="relative z-10 mt-auto pt-6 border-t border-white/5 flex items-center gap-4">
+                        <div class="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">
+                            覆盖 300+ <span class="text-sm font-normal text-gray-500 ml-1">药企代表</span>
+                        </div>
+                        <div class="h-8 w-px bg-white/10"></div>
+                        <div class="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">
+                            触达 1000+ <span class="text-sm font-normal text-gray-500 ml-1">医生</span>
+                        </div>
+                    </div>
+                </a>
 
-                    <div class="border-t border-white/5 pt-5 mt-auto">
-                        <div class="mb-4">
-                            <span class="text-xs text-gray-500 block mb-1 uppercase tracking-wider">My Role</span>
-                            <span class="text-sm text-white font-medium">画像体系与分析模块 Owner</span>
-                        </div>
-                        <div class="bg-white/5 p-4 rounded-lg text-xs text-gray-300 space-y-2">
-                            <div>设计三维画像模型，覆盖用户/团队/项目多主体。</div>
-                            <div class="text-gray-500 pt-1 border-t border-white/5 mt-2">成果：打通埋点→清洗→分析→大屏链路。</div>
-                        </div>
-                        <button
-                            class="mt-5 w-full py-2.5 border border-white/10 text-xs text-white hover:bg-white hover:text-black transition-colors rounded-lg font-medium">
-                            查看原型 (Mockups)
-                        </button>
+                <!-- Card 2 - 司南数据分析平台 -->
+                <a href="https://app.mockplus.cn/p/kGgFJfXUc0F" target="_blank"
+                    class="group relative overflow-hidden rounded-3xl border border-white/10 bg-slate-900/50 p-8 hover:border-purple-500/50 hover:shadow-2xl hover:shadow-purple-500/10 hover:-translate-y-1 transition-all duration-300 backdrop-blur-sm reveal delay-200 flex flex-col justify-between">
+                    <div
+                        class="absolute -top-20 -right-20 w-48 h-48 bg-purple-500/20 blur-[60px] rounded-full pointer-events-none group-hover:bg-purple-500/30 transition-colors">
                     </div>
-                </div>
+                    <div
+                        class="absolute -right-4 -bottom-4 text-white opacity-[0.05] group-hover:opacity-[0.1] transition-opacity rotate-12 pointer-events-none scale-125">
+                        <i class="fa-solid fa-chart-pie text-8xl"></i>
+                    </div>
 
-                <!-- Project 4 -->
-                <div
-                    class="bg-card-bg p-6 lg:p-8 rounded-2xl border border-white/5 hover:border-accent-blue/40 transition-all hover:-translate-y-2 group flex flex-col h-full reveal delay-100">
-                    <div class="text-accent-blue text-xs font-bold tracking-widest uppercase mb-4">Service Management
+                    <div class="relative z-10">
+                        <div class="flex justify-between items-start">
+                            <div
+                                class="inline-flex items-center px-3 py-1 rounded-full border border-purple-500/30 bg-purple-500/10 text-purple-400 text-xs font-medium mb-6">
+                                数据中台 / 可视化
+                            </div>
+                            <div
+                                class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-white/50 group-hover:bg-purple-500 group-hover:text-white transition-all duration-300">
+                                <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
+                            司南数据分析平台</h3>
+                        <p class="text-sm text-gray-400 leading-relaxed mb-6">
+                            打造“埋点-清洗-分析-可视化”全链路数据闭环。构建多主体三维画像模型，驱动业务资产化转型。
+                        </p>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-4 group-hover:text-accent-blue transition-colors">
-                        服务与用户管理平台</h3>
-                    <p class="text-text-muted text-sm mb-8 flex-grow leading-relaxed">
-                        面向长期服务场景打造的用户管理与任务协同平台，实现服务过程标准化与数据沉淀。
-                    </p>
+                    <div class="relative z-10 mt-auto">
+                        <div class="text-lg font-bold text-white group-hover:text-purple-400 transition-colors">
+                            独创多维画像模型
+                        </div>
+                    </div>
+                </a>
 
-                    <div class="border-t border-white/5 pt-5 mt-auto">
-                        <div class="mb-4">
-                            <span class="text-xs text-gray-500 block mb-1 uppercase tracking-wider">My Role</span>
-                            <span class="text-sm text-white font-medium">流程 Owner，负责架构设计</span>
-                        </div>
-                        <div class="bg-white/5 p-4 rounded-lg text-xs text-gray-300 space-y-2">
-                            <div>统一多个业务线的数据模型与流程标准。</div>
-                            <div class="text-gray-500 pt-1 border-t border-white/5 mt-2">成果：项目方案获行业立项认可。</div>
-                        </div>
-                        <button
-                            class="mt-5 w-full py-2.5 border border-white/10 text-xs text-white hover:bg-white hover:text-black transition-colors rounded-lg font-medium">
-                            查看原型 (Mockups)
-                        </button>
+                <!-- Card 3 - 数字资产银行 -->
+                <a href="https://app.mockplus.cn/p/x4TOVjTyh" target="_blank"
+                    class="group relative overflow-hidden rounded-3xl border border-white/10 bg-slate-900/50 p-8 hover:border-emerald-500/50 hover:shadow-2xl hover:shadow-emerald-500/10 hover:-translate-y-1 transition-all duration-300 backdrop-blur-sm reveal delay-100 flex flex-col justify-between">
+                    <div
+                        class="absolute -top-20 -right-20 w-48 h-48 bg-emerald-500/20 blur-[60px] rounded-full pointer-events-none group-hover:bg-emerald-500/30 transition-colors">
                     </div>
-                </div>
+                    <div
+                        class="absolute -right-4 -bottom-4 text-white opacity-[0.05] group-hover:opacity-[0.1] transition-opacity rotate-12 pointer-events-none scale-125">
+                        <i class="fa-solid fa-shield-halved text-8xl"></i>
+                    </div>
 
-                <!-- Project 5 -->
-                <div
-                    class="bg-card-bg p-6 lg:p-8 rounded-2xl border border-white/5 hover:border-accent-blue/40 transition-all hover:-translate-y-2 group flex flex-col h-full reveal delay-200">
-                    <div class="text-accent-blue text-xs font-bold tracking-widest uppercase mb-4">Blockchain / Web3
+                    <div class="relative z-10">
+                        <div class="flex justify-between items-start">
+                            <div
+                                class="inline-flex items-center px-3 py-1 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-xs font-medium mb-6">
+                                Web3 / 隐私计算
+                            </div>
+                            <div
+                                class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-white/50 group-hover:bg-emerald-500 group-hover:text-white transition-all duration-300">
+                                <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors">
+                            数字资产银行</h3>
+                        <p class="text-sm text-gray-400 leading-relaxed mb-6">
+                            面向数据要素市场的医疗数据确权底座。基于区块链与隐私计算，实现符合 EU EUDI 标准的数据跨境流通。
+                        </p>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-4 group-hover:text-accent-blue transition-colors">
-                        数字资产底层平台</h3>
-                    <p class="text-text-muted text-sm mb-8 flex-grow leading-relaxed">
-                        构建“身份—权限—资产”一体化能力的数字资产底层平台。
-                    </p>
+                    <div class="relative z-10 mt-auto">
+                        <div class="text-lg font-bold text-white group-hover:text-emerald-400 transition-colors">
+                            符合 EU EUDI 标准
+                        </div>
+                    </div>
+                </a>
 
-                    <div class="border-t border-white/5 pt-5 mt-auto">
-                        <div class="mb-4">
-                            <span class="text-xs text-gray-500 block mb-1 uppercase tracking-wider">My Role</span>
-                            <span class="text-sm text-white font-medium">顶层架构 Owner</span>
-                        </div>
-                        <div class="bg-white/5 p-4 rounded-lg text-xs text-gray-300 space-y-2">
-                            <div>实现符合国际标准的数字身份体系。</div>
-                            <div class="text-gray-500 pt-1 border-t border-white/5 mt-2">成果：构建可审计监管的数据确权机制。</div>
-                        </div>
-                        <button
-                            class="mt-5 w-full py-2.5 border border-white/10 text-xs text-white hover:bg-white hover:text-black transition-colors rounded-lg font-medium">
-                            查看原型 (Mockups)
-                        </button>
+                <!-- Card 4 - 电销外呼平台 -->
+                <a href="https://app.mockplus.cn/p/OwgjQFMbT9" target="_blank"
+                    class="group relative overflow-hidden rounded-3xl border border-white/10 bg-slate-900/50 p-8 hover:border-orange-500/50 hover:shadow-2xl hover:shadow-orange-500/10 hover:-translate-y-1 transition-all duration-300 backdrop-blur-sm reveal delay-200 flex flex-col justify-between">
+                    <div
+                        class="absolute -top-20 -right-20 w-48 h-48 bg-orange-500/20 blur-[60px] rounded-full pointer-events-none group-hover:bg-orange-500/30 transition-colors">
                     </div>
-                </div>
+                    <div
+                        class="absolute -right-4 -bottom-4 text-white opacity-[0.05] group-hover:opacity-[0.1] transition-opacity rotate-12 pointer-events-none scale-125">
+                        <i class="fa-solid fa-headset text-8xl"></i>
+                    </div>
+
+                    <div class="relative z-10">
+                        <div class="flex justify-between items-start">
+                            <div
+                                class="inline-flex items-center px-3 py-1 rounded-full border border-orange-500/30 bg-orange-500/10 text-orange-400 text-xs font-medium mb-6">
+                                增长工具 / 自动化
+                            </div>
+                            <div
+                                class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-white/50 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300">
+                                <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-orange-400 transition-colors">
+                            电销外呼平台</h3>
+                        <p class="text-sm text-gray-400 leading-relaxed mb-6">
+                            任务驱动的智能化外呼系统。实时追踪医生响应行为，自动补全画像标签，大幅提升线索转化的精准度。
+                        </p>
+                    </div>
+                    <div class="relative z-10 mt-auto">
+                        <div class="text-lg font-bold text-white group-hover:text-orange-400 transition-colors">
+                            处理线索 35万+ <span class="text-sm text-gray-500 font-normal">/ 转化 12%</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 5 - 慢病管理项目 -->
+                <a href="https://app.mockplus.cn/p/gqOmQ0wWXd" target="_blank"
+                    class="group relative overflow-hidden rounded-3xl border border-white/10 bg-slate-900/50 p-8 hover:border-indigo-500/50 hover:shadow-2xl hover:shadow-indigo-500/10 hover:-translate-y-1 transition-all duration-300 backdrop-blur-sm reveal delay-300 flex flex-col justify-between">
+                    <div
+                        class="absolute -top-20 -right-20 w-48 h-48 bg-indigo-500/20 blur-[60px] rounded-full pointer-events-none group-hover:bg-indigo-500/30 transition-colors">
+                    </div>
+                    <div
+                        class="absolute -right-4 -bottom-4 text-white opacity-[0.05] group-hover:opacity-[0.1] transition-opacity rotate-12 pointer-events-none scale-125">
+                        <i class="fa-solid fa-heart-pulse text-8xl"></i>
+                    </div>
+
+                    <div class="relative z-10">
+                        <div class="flex justify-between items-start">
+                            <div
+                                class="inline-flex items-center px-3 py-1 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-indigo-400 text-xs font-medium mb-6">
+                                数字健康 / G端项目
+                            </div>
+                            <div
+                                class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-white/50 group-hover:bg-indigo-500 group-hover:text-white transition-all duration-300">
+                                <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-indigo-400 transition-colors">
+                            慢病管理项目</h3>
+                        <p class="text-sm text-gray-400 leading-relaxed mb-6">
+                            真实世界数据采集与服务体系。协同互联网医院与县域医疗，项目获国家卫健委“能教司”正式立项。
+                        </p>
+                    </div>
+                    <div class="relative z-10 mt-auto">
+                        <div class="text-lg font-bold text-white group-hover:text-indigo-400 transition-colors">
+                            国家级课题立项
+                        </div>
+                    </div>
+                </a>
 
             </div>
         </div>
@@ -596,7 +643,7 @@
         </div>
     </section>
 
-    <!-- SECTION 6: CONTACT (联系我) -->
+    <!-- SECTION 4: CONTACT (联系我) -->
     <section id="contact" class="min-h-screen flex flex-col justify-center bg-[#050505] border-t border-border-light">
         <div class="max-w-4xl mx-auto text-center px-6 w-full reveal">
             <h2 class="text-4xl md:text-6xl font-bold text-white mb-10 leading-tight">
