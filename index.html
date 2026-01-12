@@ -30,11 +30,12 @@
             </a>
 
             <!-- Desktop Menu -->
-            <nav class="hidden md:flex space-x-10 text-xs font-medium tracking-widest text-text-muted">
-                <a href="#core-competencies" class="nav-link hover:text-white transition-colors uppercase">核心能力</a>
-                <a href="#projects" class="nav-link hover:text-white transition-colors uppercase">项目集</a>
-                <a href="#experience" class="nav-link hover:text-white transition-colors uppercase">工作经历</a>
-                <a href="#contact" class="nav-link hover:text-white transition-colors uppercase">联系方式</a>
+            <nav
+                class="hidden md:flex space-x-10 text-[10px] md:text-xs font-bold uppercase tracking-widest text-text-muted">
+                <a href="#core-competencies" class="nav-link hover:text-white transition-colors">核心能力</a>
+                <a href="#projects" class="nav-link hover:text-white transition-colors">项目集</a>
+                <a href="#experience" class="nav-link hover:text-white transition-colors">工作经历</a>
+                <a href="#contact" class="nav-link hover:text-white transition-colors">联系方式</a>
             </nav>
 
             <!-- Mobile Menu Button -->
@@ -46,7 +47,7 @@
         <!-- Mobile Menu Overlay -->
         <div id="mobile-menu"
             class="fixed inset-0 bg-[#0a0a0a] z-40 flex flex-col items-center justify-center space-y-8 md:hidden h-screen w-screen">
-            <a href="#skills" class="mobile-link text-2xl font-light text-white uppercase tracking-widest"
+            <a href="#core-competencies" class="mobile-link text-2xl font-light text-white uppercase tracking-widest"
                 onclick="toggleMenu()">核心能力</a>
             <a href="#projects" class="mobile-link text-2xl font-light text-white uppercase tracking-widest"
                 onclick="toggleMenu()">项目集</a>
@@ -94,11 +95,14 @@
 
                 <!-- 2. H1 Headline (Optimized Size) -->
                 <h1
-                    class="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-bold text-white mb-8 leading-tight tracking-tight whitespace-nowrap">
+                    class="text-4xl sm:text-5xl md:text-6xl lg:text-[4.2rem] font-bold text-white mb-8 leading-[1.1] tracking-tight">
                     <span
-                        class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-200">让产品把世界变得更简单</span>
+                        class="block text-blue-100 text-2xl sm:text-3xl md:text-4xl lg:text-[2.5rem] mb-2 font-medium tracking-normal">好的产品</span>
+                    <span
+                        class="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-200">让世界变得更简单</span>
                 </h1>
 
+                <!-- 3. Subtext (Breathable Spacing) -->
                 <!-- 3. Subtext (Breathable Spacing) -->
                 <p class="text-base md:text-lg text-gray-400 mb-12 max-w-xl leading-relaxed font-light">
                     专注 0 → 1 的平台型产品设计与商业化落地
@@ -118,7 +122,7 @@
 
                 <!-- 5. Tags (Grouped Directly Under Buttons) -->
                 <div
-                    class="flex flex-wrap gap-x-6 gap-y-4 text-[10px] sm:text-xs font-bold text-gray-500 uppercase tracking-widest">
+                    class="flex flex-wrap gap-x-6 gap-y-4 text-[10px] md:text-xs font-bold text-gray-500 uppercase tracking-widest">
                     <div class="flex items-center gap-2 hover:text-blue-400 transition-colors cursor-default">
                         <i class="fa-solid fa-layer-group text-blue-500/80"></i> 平台型产品
                     </div>
@@ -197,156 +201,157 @@
     <section id="core-competencies"
         class="min-h-screen flex flex-col justify-center py-24 bg-[#050505] relative overflow-hidden group/section border-t border-white/5">
 
-        <!-- 背景装饰 (可选，复用 Skills 的光晕或添加新的) -->
+        <!-- 背景装饰 -->
         <div
             class="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-900/10 blur-[100px] pointer-events-none rounded-full">
         </div>
 
         <!-- 1. Section Header (标题区) -->
-        <div class="max-w-7xl mx-auto px-6 mb-20 text-center relative z-10 reveal">
-            <h2 class="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight leading-tight">
-                不只是管理产品<br class="hidden md:block" />
-                更是在设计<span
-                    class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">商业系统</span>
+        <div class="max-w-7xl mx-auto px-6 mb-16 text-center relative z-10 reveal">
+            <h2 class="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight leading-tight">
+                Core Competencies
             </h2>
-            <p class="text-xl text-gray-400 font-light max-w-2xl mx-auto leading-relaxed">
-                从复杂业务中理清结构，用产品跑通路径，并推动结果持续发生。
+            <p class="text-lg md:text-xl text-gray-400 font-light max-w-2xl mx-auto leading-relaxed">
+                10 年跨界积淀，专注复杂业务系统的价值实现与商业增长
             </p>
         </div>
 
+        <!-- 弱分隔 -->
+        <div class="max-w-7xl mx-auto px-6 mb-16 relative z-10 reveal">
+            <div class="w-full h-px bg-Gradient-to-r from-transparent via-white/10 to-transparent"></div>
+        </div>
+
         <!-- 2. Grid Cards Layout (核心内容区) -->
-        <div class="max-w-7xl mx-auto px-6 w-full grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
+        <div class="max-w-7xl mx-auto px-6 w-full grid grid-cols-1 md:grid-cols-3 gap-y-8 gap-x-12 relative z-10">
 
-            <!-- Card 1: 复杂业务抽象 (The Architect) -->
+            <!-- Card A: 0→1 商业化架构 (The Value Architect) - Highlighted Default -->
             <div
-                class="bg-[#0f0f0f] p-8 rounded-2xl border border-white/5 shadow-lg hover:shadow-2xl hover:border-white/10 hover:-translate-y-2 transition-all duration-300 relative overflow-hidden group reveal delay-100">
-                <!-- 视觉暗示: 网格纹理 -->
-                <div
-                    class="absolute inset-0 bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:24px_24px] opacity-[0.03] group-hover:opacity-[0.06] transition-opacity">
-                </div>
+                class="bg-[#111] p-8 md:p-10 rounded-[2rem] border border-white/10 shadow-2xl hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.5)] hover:-translate-y-[6px] transition-all duration-250 ease-out cursor-default relative overflow-hidden group reveal flex flex-col justify-between">
 
-                <div class="relative z-10 flex flex-col h-full">
-                    <div
-                        class="w-14 h-14 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300 group-hover:bg-white/10">
-                        <i class="fa-solid fa-layer-group text-2xl"></i>
+                <div class="relative z-10">
+                    <!-- Header -->
+                    <div class="flex items-start gap-5 mb-6">
+                        <div
+                            class="w-12 h-12 shrink-0 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-white group-hover:bg-blue-500 group-hover:text-white transition-all duration-250">
+                            <!-- Icon: Growth Trend -->
+                            <i class="fa-solid fa-arrow-trend-up text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl md:text-2xl font-bold text-white mb-1 leading-snug">0→1 商业化实战</h3>
+                            <span class="text-[10px] md:text-xs font-bold text-blue-400 uppercase tracking-widest">The
+                                Value
+                                Architect</span>
+                        </div>
                     </div>
-                    <h3 class="text-2xl font-bold text-white mb-2">复杂业务抽象<br><span
-                            class="text-sm font-medium text-gray-500 uppercase tracking-widest">The Architect</span>
-                    </h3>
 
-                    <p class="text-white/80 text-sm font-medium mb-6 leading-relaxed border-l-2 border-white/20 pl-3">
-                        将复杂、多约束的业务问题，转化为可扩展、可演进的产品结构。
+                    <!-- Tags -->
+                    <div class="mb-8 flex flex-wrap gap-2">
+                        <span
+                            class="inline-block px-3 py-1 rounded-md bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-bold tracking-wide hover:bg-blue-500/20 transition-colors duration-200">
+                            商业判断
+                        </span>
+                        <span
+                            class="inline-block px-3 py-1 rounded-md bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-bold tracking-wide hover:bg-blue-500/20 transition-colors duration-200">
+                            增长机制
+                        </span>
+                        <span
+                            class="inline-block px-3 py-1 rounded-md bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-bold tracking-wide hover:bg-blue-500/20 transition-colors duration-200">
+                            可复制路径
+                        </span>
+                    </div>
+
+                    <p class="text-gray-400 text-sm md:text-base leading-relaxed text-left">
+                        在多种复杂业务场景中完成 0→1 验证，将商业机会转化为可复制的增长路径，并在强约束下做出关键取舍。
                     </p>
-
-                    <ul class="space-y-3 mt-auto">
-                        <li
-                            class="flex items-start gap-3 text-xs text-gray-400 group-hover:text-gray-300 transition-colors">
-                            <i class="fa-solid fa-check text-white/20 mt-0.5"></i>
-                            <span>在多角色、多场景下拆解核心问题与关键约束</span>
-                        </li>
-                        <li
-                            class="flex items-start gap-3 text-xs text-gray-400 group-hover:text-gray-300 transition-colors">
-                            <i class="fa-solid fa-check text-white/20 mt-0.5"></i>
-                            <span>将不清晰需求沉淀为稳定、可复用的平台能力</span>
-                        </li>
-                        <li
-                            class="flex items-start gap-3 text-xs text-gray-400 group-hover:text-gray-300 transition-colors">
-                            <i class="fa-solid fa-check text-white/20 mt-0.5"></i>
-                            <span>设计支持长期演进的产品结构，避免一次性方案</span>
-                        </li>
-                    </ul>
                 </div>
             </div>
 
-            <!-- Card 2: 商业化增长 (The Strategist) -->
+            <!-- Card B: 复杂业务抽象 (The Logic Master) -->
             <div
-                class="bg-[#0f0f0f] p-8 rounded-2xl border border-white/5 shadow-lg hover:shadow-2xl hover:border-white/10 hover:-translate-y-2 transition-all duration-300 relative overflow-hidden group reveal delay-200">
-                <!-- 视觉暗示: 抽象图表装饰 -->
-                <div
-                    class="absolute -right-4 -top-4 text-white opacity-[0.02] group-hover:opacity-[0.05] transition-opacity transform rotate-12 scale-150 pointer-events-none">
-                    <i class="fa-solid fa-chart-line text-9xl"></i>
-                </div>
+                class="bg-[#0A0A0A] p-8 md:p-10 rounded-[2rem] border border-white/5 shadow-2xl hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.5)] hover:-translate-y-[6px] hover:bg-[#111] hover:border-white/10 transition-all duration-250 ease-out cursor-default relative overflow-hidden group reveal flex flex-col justify-between">
 
-                <div class="relative z-10 flex flex-col h-full">
-                    <div
-                        class="w-14 h-14 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 mb-6 group-hover:scale-110 transition-transform duration-300 group-hover:bg-blue-500/20">
-                        <i class="fa-solid fa-chart-line text-2xl"></i>
+                <div class="relative z-10">
+                    <!-- Header -->
+                    <div class="flex items-start gap-5 mb-6">
+                        <div
+                            class="w-12 h-12 shrink-0 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-white group-hover:bg-indigo-500 group-hover:text-white transition-all duration-250">
+                            <!-- Icon: Node / Structure -->
+                            <i class="fa-solid fa-network-wired text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl md:text-2xl font-bold text-white mb-1 leading-snug">复杂业务平台化</h3>
+                            <span class="text-[10px] md:text-xs font-bold text-indigo-400 uppercase tracking-widest">The
+                                Logic
+                                Master</span>
+                        </div>
                     </div>
-                    <h3 class="text-2xl font-bold text-white mb-2">商业化增长<br><span
-                            class="text-sm font-medium text-gray-500 uppercase tracking-widest">The Strategist</span>
-                    </h3>
 
-                    <p
-                        class="text-blue-200/80 text-sm font-medium mb-6 leading-relaxed border-l-2 border-blue-500/30 pl-3">
-                        以业务目标为牵引，推动产品设计服务于长期增长与商业结果。
+                    <!-- Tags -->
+                    <div class="mb-8 flex flex-wrap gap-2">
+                        <span
+                            class="inline-block px-3 py-1 rounded-md bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-bold tracking-wide hover:bg-indigo-500/20 transition-colors duration-200">
+                            问题抽象
+                        </span>
+                        <span
+                            class="inline-block px-3 py-1 rounded-md bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-bold tracking-wide hover:bg-indigo-500/20 transition-colors duration-200">
+                            系统建模
+                        </span>
+                        <span
+                            class="inline-block px-3 py-1 rounded-md bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-bold tracking-wide hover:bg-indigo-500/20 transition-colors duration-200">
+                            长期演进
+                        </span>
+                    </div>
+
+                    <p class="text-gray-400 text-sm md:text-base leading-relaxed text-left">
+                        在高复杂度、强规则约束的业务环境中拆解问题本质，将零散需求抽象为可演进、可复用的系统结构。
                     </p>
-
-                    <ul class="space-y-3 mt-auto">
-                        <li
-                            class="flex items-start gap-3 text-xs text-gray-400 group-hover:text-gray-300 transition-colors">
-                            <i class="fa-solid fa-check text-blue-500/30 mt-0.5"></i>
-                            <span>从业务目标反推产品路径，而非仅交付功能</span>
-                        </li>
-                        <li
-                            class="flex items-start gap-3 text-xs text-gray-400 group-hover:text-gray-300 transition-colors">
-                            <i class="fa-solid fa-check text-blue-500/30 mt-0.5"></i>
-                            <span>通过指标与机制判断产品是否持续改善</span>
-                        </li>
-                        <li
-                            class="flex items-start gap-3 text-xs text-gray-400 group-hover:text-gray-300 transition-colors">
-                            <i class="fa-solid fa-check text-blue-500/30 mt-0.5"></i>
-                            <span>在可行性与收益之间做取舍，形成正向商业循环</span>
-                        </li>
-                    </ul>
                 </div>
             </div>
 
-            <!-- Card 3: 0→1 落地 (The Executor) -->
+            <!-- Card C: 结果导向执行 (The Growth Engine) -->
             <div
-                class="bg-[#0f0f0f] p-8 rounded-2xl border border-white/5 shadow-lg hover:shadow-2xl hover:border-white/10 hover:-translate-y-2 transition-all duration-300 relative overflow-hidden group reveal delay-300">
-                <!-- 视觉暗示: 落地/冲击波纹 -->
-                <div
-                    class="absolute bottom-0 right-0 w-32 h-32 bg-indigo-900/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 translate-x-10 translate-y-10">
-                </div>
+                class="bg-[#0A0A0A] p-8 md:p-10 rounded-[2rem] border border-white/5 shadow-2xl hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.5)] hover:-translate-y-[6px] hover:bg-[#111] hover:border-white/10 transition-all duration-250 ease-out cursor-default relative overflow-hidden group reveal flex flex-col justify-between">
 
-                <div class="relative z-10 flex flex-col h-full">
-                    <div
-                        class="w-14 h-14 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 mb-6 group-hover:scale-110 transition-transform duration-300 group-hover:bg-indigo-500/20">
-                        <i class="fa-solid fa-rocket text-2xl"></i>
+                <div class="relative z-10">
+                    <!-- Header -->
+                    <div class="flex items-start gap-5 mb-6">
+                        <div
+                            class="w-12 h-12 shrink-0 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-white group-hover:bg-emerald-500 group-hover:text-white transition-all duration-250">
+                            <!-- Icon: Bullseye -->
+                            <i class="fa-solid fa-bullseye text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl md:text-2xl font-bold text-white mb-1 leading-snug">全链路价值增长</h3>
+                            <span
+                                class="text-[10px] md:text-xs font-bold text-emerald-400 uppercase tracking-widest">The
+                                Growth
+                                Engine</span>
+                        </div>
                     </div>
-                    <h3 class="text-2xl font-bold text-white mb-2">0→1 产品落地<br><span
-                            class="text-sm font-medium text-gray-500 uppercase tracking-widest">The Executor</span></h3>
 
-                    <p
-                        class="text-indigo-200/80 text-sm font-medium mb-6 leading-relaxed border-l-2 border-indigo-500/30 pl-3">
-                        在高度不确定的环境中，推动产品从概念走向真实使用。
+                    <!-- Tags -->
+                    <div class="mb-8 flex flex-wrap gap-2">
+                        <span
+                            class="inline-block px-3 py-1 rounded-md bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold tracking-wide hover:bg-emerald-500/20 transition-colors duration-200">
+                            节奏管理
+                        </span>
+                        <span
+                            class="inline-block px-3 py-1 rounded-md bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold tracking-wide hover:bg-emerald-500/20 transition-colors duration-200">
+                            数据反馈
+                        </span>
+                        <span
+                            class="inline-block px-3 py-1 rounded-md bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold tracking-wide hover:bg-emerald-500/20 transition-colors duration-200">
+                            结果闭环
+                        </span>
+                    </div>
+
+                    <p class="text-gray-400 text-sm md:text-base leading-relaxed text-left">
+                        在不确定和资源受限的条件下推进落地，通过节奏控制与数据反馈，确保产品能力持续转化为业务结果。
                     </p>
-
-                    <ul class="space-y-3 mt-auto">
-                        <li
-                            class="flex items-start gap-3 text-xs text-gray-400 group-hover:text-gray-300 transition-colors">
-                            <i class="fa-solid fa-check text-indigo-500/30 mt-0.5"></i>
-                            <span>在早期阶段收敛方向，降低试错成本</span>
-                        </li>
-                        <li
-                            class="flex items-start gap-3 text-xs text-gray-400 group-hover:text-gray-300 transition-colors">
-                            <i class="fa-solid fa-check text-indigo-500/30 mt-0.5"></i>
-                            <span>协调多方资源，解决推进过程中的关键阻力</span>
-                        </li>
-                        <li
-                            class="flex items-start gap-3 text-xs text-gray-400 group-hover:text-gray-300 transition-colors">
-                            <i class="fa-solid fa-check text-indigo-500/30 mt-0.5"></i>
-                            <span>以真实使用与业务价值作为交付标准</span>
-                        </li>
-                    </ul>
                 </div>
             </div>
 
         </div>
-
-        <!-- 装饰: 底部渐变连接 (已移除，Dark mode下可能不需要太强的白渐变，或者改为黑渐变) -->
-        <!-- <div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-[#050505] to-transparent pointer-events-none"></div> -->
-
     </section>
     <!-- SECTION 3: PROJECTS (项目集) -->
     <section id="projects" class="py-24 bg-[#050505] relative overflow-hidden">
@@ -356,7 +361,8 @@
             <div class="mb-16 flex items-end justify-between border-b border-white/10 pb-6 reveal">
                 <div>
                     <h2 class="text-3xl md:text-5xl font-bold text-white mb-2 tracking-tight">Featured Projects</h2>
-                    <p class="text-gray-500 tracking-widest uppercase text-xs font-bold">商业化 · 数据 · 增长</p>
+                    <p class="text-[10px] md:text-xs font-bold uppercase tracking-widest text-gray-500">商业化 · 数据 · 增长
+                    </p>
                 </div>
             </div>
 
@@ -365,23 +371,31 @@
 
                 <!-- Card 1 (Hero Card) - 学术助理 App -->
                 <a href="https://app.mockplus.cn/p/yUQcVdORk" target="_blank"
-                    class="lg:col-span-2 group relative overflow-hidden rounded-[2rem] bg-[#0A0A0A] border border-white/5 p-8 md:p-10 hover:border-white/20 transition-all duration-300 reveal delay-100 flex flex-col justify-between min-h-[360px]">
+                    class="lg:col-span-2 group relative overflow-hidden rounded-[2rem] bg-[#0A0A0A] border border-white/5 p-8 md:p-10 hover:border-blue-500/30 hover:scale-[1.01] transition-all duration-300 reveal delay-100 flex flex-col justify-between min-h-[360px]">
+
+                    <!-- 配色光晕 -->
+                    <div
+                        class="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-[80px] pointer-events-none group-hover:bg-blue-500/20 transition-all duration-500">
+                    </div>
+                    <!-- 水印图标 -->
+                    <i
+                        class="fa-solid fa-user-doctor absolute bottom-6 right-8 text-[120px] text-blue-500/5 rotate-[-10deg] pointer-events-none group-hover:text-blue-500/10 transition-all duration-500"></i>
 
                     <div class="relative z-10">
                         <div class="flex justify-between items-start mb-6">
-                            <div class="text-xs font-bold text-blue-400 tracking-wider uppercase">
+                            <div class="text-[10px] md:text-xs font-bold text-blue-400 tracking-wider uppercase">
                                 B2B / 合规数字化
                             </div>
                             <div
-                                class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-white/40 group-hover:bg-white group-hover:text-black transition-all duration-300">
+                                class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-white/40 group-hover:bg-blue-500 group-hover:text-white group-hover:rotate-45 transition-all duration-300">
                                 <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
                             </div>
                         </div>
                         <h3
-                            class="text-3xl md:text-4xl font-bold text-white mb-4 group-hover:text-gray-200 transition-colors">
+                            class="text-2xl md:text-3xl font-bold text-white mb-4 group-hover:text-gray-200 transition-colors">
                             学术助理 App</h3>
-                        <p class="text-gray-400 leading-relaxed max-w-2xl text-base">
-                            0到1主导的药企代表客情管理平台。构建“精准检索-虚拟拜访-合规留痕”闭环，将合规监管从“事后查验”升级为“过程留痕”。
+                        <p class="text-base md:text-lg text-gray-400 leading-relaxed max-w-2xl">
+                            0到1主导的药企代表客情管理平台。构建"精准检索-虚拟拜访-合规留痕"闭环，将合规监管从"事后查验"升级为"过程留痕"。
                         </p>
                     </div>
 
@@ -400,22 +414,31 @@
 
                 <!-- Card 2 - 司南数据分析平台 -->
                 <a href="https://app.mockplus.cn/p/kGgFJfXUc0F" target="_blank"
-                    class="group relative overflow-hidden rounded-[2rem] bg-[#0A0A0A] border border-white/5 p-8 hover:border-white/20 transition-all duration-300 reveal delay-200 flex flex-col justify-between">
+                    class="group relative overflow-hidden rounded-[2rem] bg-[#0A0A0A] border border-white/5 p-8 hover:border-purple-500/30 hover:scale-[1.02] transition-all duration-300 reveal delay-200 flex flex-col justify-between">
+
+                    <!-- 配色光晕 -->
+                    <div
+                        class="absolute top-0 right-0 w-48 h-48 bg-purple-500/10 rounded-full blur-[60px] pointer-events-none group-hover:bg-purple-500/20 transition-all duration-500">
+                    </div>
+                    <!-- 水印图标 -->
+                    <i
+                        class="fa-solid fa-chart-pie absolute bottom-4 right-6 text-[80px] text-purple-500/5 rotate-[-8deg] pointer-events-none group-hover:text-purple-500/10 transition-all duration-500"></i>
 
                     <div class="relative z-10">
                         <div class="flex justify-between items-start mb-6">
-                            <div class="text-xs font-bold text-purple-400 tracking-wider uppercase">
+                            <div class="text-[10px] md:text-xs font-bold text-purple-400 tracking-wider uppercase">
                                 数据中台 / 可视化
                             </div>
                             <div
-                                class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-white/40 group-hover:bg-white group-hover:text-black transition-all duration-300">
+                                class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-white/40 group-hover:bg-purple-500 group-hover:text-white group-hover:rotate-45 transition-all duration-300">
                                 <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
                             </div>
                         </div>
-                        <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-gray-200 transition-colors">
+                        <h3
+                            class="text-xl md:text-2xl font-bold text-white mb-3 group-hover:text-gray-200 transition-colors">
                             司南数据分析平台</h3>
-                        <p class="text-sm text-gray-400 leading-relaxed mb-6">
-                            打造“埋点-清洗-分析-可视化”全链路数据闭环。构建多主体三维画像模型，驱动业务资产化转型。
+                        <p class="text-sm md:text-base text-gray-400 leading-relaxed mb-6">
+                            打造"埋点-清洗-分析-可视化"全链路数据闭环。构建多主体三维画像模型，驱动业务资产化转型。
                         </p>
                     </div>
 
@@ -427,21 +450,30 @@
 
                 <!-- Card 3 - 数字资产银行 -->
                 <a href="https://app.mockplus.cn/p/x4TOVjTyh" target="_blank"
-                    class="group relative overflow-hidden rounded-[2rem] bg-[#0A0A0A] border border-white/5 p-8 hover:border-white/20 transition-all duration-300 reveal delay-100 flex flex-col justify-between">
+                    class="group relative overflow-hidden rounded-[2rem] bg-[#0A0A0A] border border-white/5 p-8 hover:border-emerald-500/30 hover:scale-[1.02] transition-all duration-300 reveal delay-100 flex flex-col justify-between">
+
+                    <!-- 配色光晕 -->
+                    <div
+                        class="absolute top-0 right-0 w-48 h-48 bg-emerald-500/10 rounded-full blur-[60px] pointer-events-none group-hover:bg-emerald-500/20 transition-all duration-500">
+                    </div>
+                    <!-- 水印图标 -->
+                    <i
+                        class="fa-solid fa-link absolute bottom-4 right-6 text-[80px] text-emerald-500/5 rotate-[-8deg] pointer-events-none group-hover:text-emerald-500/10 transition-all duration-500"></i>
 
                     <div class="relative z-10">
                         <div class="flex justify-between items-start mb-6">
-                            <div class="text-xs font-bold text-emerald-400 tracking-wider uppercase">
+                            <div class="text-[10px] md:text-xs font-bold text-emerald-400 tracking-wider uppercase">
                                 Web3 / 隐私计算
                             </div>
                             <div
-                                class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-white/40 group-hover:bg-white group-hover:text-black transition-all duration-300">
+                                class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-white/40 group-hover:bg-emerald-500 group-hover:text-white group-hover:rotate-45 transition-all duration-300">
                                 <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
                             </div>
                         </div>
-                        <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-gray-200 transition-colors">
+                        <h3
+                            class="text-xl md:text-2xl font-bold text-white mb-3 group-hover:text-gray-200 transition-colors">
                             数字资产银行</h3>
-                        <p class="text-sm text-gray-400 leading-relaxed mb-6">
+                        <p class="text-sm md:text-base text-gray-400 leading-relaxed mb-6">
                             面向数据要素市场的医疗数据确权底座。基于区块链与隐私计算，实现符合 EU EUDI 标准的数据跨境流通。
                         </p>
                     </div>
@@ -454,21 +486,30 @@
 
                 <!-- Card 4 - 电销外呼平台 -->
                 <a href="https://app.mockplus.cn/p/OwgjQFMbT9" target="_blank"
-                    class="group relative overflow-hidden rounded-[2rem] bg-[#0A0A0A] border border-white/5 p-8 hover:border-white/20 transition-all duration-300 reveal delay-200 flex flex-col justify-between">
+                    class="group relative overflow-hidden rounded-[2rem] bg-[#0A0A0A] border border-white/5 p-8 hover:border-orange-500/30 hover:scale-[1.02] transition-all duration-300 reveal delay-200 flex flex-col justify-between">
+
+                    <!-- 配色光晕 -->
+                    <div
+                        class="absolute top-0 right-0 w-48 h-48 bg-orange-500/10 rounded-full blur-[60px] pointer-events-none group-hover:bg-orange-500/20 transition-all duration-500">
+                    </div>
+                    <!-- 水印图标 -->
+                    <i
+                        class="fa-solid fa-phone-volume absolute bottom-4 right-6 text-[80px] text-orange-500/5 rotate-[-8deg] pointer-events-none group-hover:text-orange-500/10 transition-all duration-500"></i>
 
                     <div class="relative z-10">
                         <div class="flex justify-between items-start mb-6">
-                            <div class="text-xs font-bold text-orange-400 tracking-wider uppercase">
+                            <div class="text-[10px] md:text-xs font-bold text-orange-400 tracking-wider uppercase">
                                 增长工具 / 自动化
                             </div>
                             <div
-                                class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-white/40 group-hover:bg-white group-hover:text-black transition-all duration-300">
+                                class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-white/40 group-hover:bg-orange-500 group-hover:text-white group-hover:rotate-45 transition-all duration-300">
                                 <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
                             </div>
                         </div>
-                        <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-gray-200 transition-colors">
+                        <h3
+                            class="text-xl md:text-2xl font-bold text-white mb-3 group-hover:text-gray-200 transition-colors">
                             电销外呼平台</h3>
-                        <p class="text-sm text-gray-400 leading-relaxed mb-6">
+                        <p class="text-sm md:text-base text-gray-400 leading-relaxed mb-6">
                             任务驱动的智能化外呼系统。实时追踪医生响应行为，自动补全画像标签，大幅提升线索转化的精准度。
                         </p>
                     </div>
@@ -481,21 +522,30 @@
 
                 <!-- Card 5 - 慢病管理项目 -->
                 <a href="https://app.mockplus.cn/p/gqOmQ0wWXd" target="_blank"
-                    class="group relative overflow-hidden rounded-[2rem] bg-[#0A0A0A] border border-white/5 p-8 hover:border-white/20 transition-all duration-300 reveal delay-300 flex flex-col justify-between">
+                    class="group relative overflow-hidden rounded-[2rem] bg-[#0A0A0A] border border-white/5 p-8 hover:border-indigo-500/30 hover:scale-[1.02] transition-all duration-300 reveal delay-300 flex flex-col justify-between">
+
+                    <!-- 配色光晕 -->
+                    <div
+                        class="absolute top-0 right-0 w-48 h-48 bg-indigo-500/10 rounded-full blur-[60px] pointer-events-none group-hover:bg-indigo-500/20 transition-all duration-500">
+                    </div>
+                    <!-- 水印图标 -->
+                    <i
+                        class="fa-solid fa-heart-pulse absolute bottom-4 right-6 text-[80px] text-indigo-500/5 rotate-[-8deg] pointer-events-none group-hover:text-indigo-500/10 transition-all duration-500"></i>
 
                     <div class="relative z-10">
                         <div class="flex justify-between items-start mb-6">
-                            <div class="text-xs font-bold text-indigo-400 tracking-wider uppercase">
+                            <div class="text-[10px] md:text-xs font-bold text-indigo-400 tracking-wider uppercase">
                                 数字健康 / G端项目
                             </div>
                             <div
-                                class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-white/40 group-hover:bg-white group-hover:text-black transition-all duration-300">
+                                class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-white/40 group-hover:bg-indigo-500 group-hover:text-white group-hover:rotate-45 transition-all duration-300">
                                 <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
                             </div>
                         </div>
-                        <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-gray-200 transition-colors">
+                        <h3
+                            class="text-xl md:text-2xl font-bold text-white mb-3 group-hover:text-gray-200 transition-colors">
                             慢病管理项目</h3>
-                        <p class="text-sm text-gray-400 leading-relaxed mb-6">
+                        <p class="text-sm md:text-base text-gray-400 leading-relaxed mb-6">
                             真实世界数据采集与服务体系。协同互联网医院与县域医疗，项目获国家卫健委“能教司”正式立项。
                         </p>
                     </div>
@@ -516,8 +566,8 @@
         <div class="max-w-6xl mx-auto px-6 w-full">
             <div class="mb-16 md:mb-20 flex items-end justify-between border-b border-white/10 pb-6 reveal">
                 <div>
-                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-2">Experience</h2>
-                    <p class="text-text-muted tracking-widest uppercase text-xs">职业生涯轨迹</p>
+                    <h2 class="text-3xl md:text-5xl font-bold text-white mb-2 tracking-tight">Experience</h2>
+                    <p class="text-[10px] md:text-xs font-bold uppercase tracking-widest text-text-muted">职业生涯轨迹</p>
                 </div>
             </div>
 
@@ -543,7 +593,7 @@
                         <div
                             class="bg-card-bg p-6 md:p-8 rounded-xl border border-white/5 hover:border-white/20 transition-all hover:bg-[#111]">
                             <div class="flex flex-wrap justify-between items-baseline mb-4">
-                                <h3 class="text-xl font-bold text-white">商业化产品经理</h3>
+                                <h3 class="text-xl md:text-2xl font-bold text-white">商业化产品经理</h3>
                                 <span class="text-sm text-text-muted">医声医事 (北京) 科技有限公司</span>
                             </div>
                             <!-- Tags -->
@@ -555,7 +605,8 @@
                                 <span
                                     class="text-xs border border-white/10 bg-white/5 px-2 py-1 rounded text-gray-300">数据产品</span>
                             </div>
-                            <ul class="list-disc list-outside ml-4 space-y-3 text-sm text-gray-400 leading-relaxed">
+                            <ul
+                                class="list-disc list-outside ml-4 space-y-3 text-sm md:text-base text-gray-400 leading-relaxed">
                                 <li>规划商业化工具链，构建多个模块化产品，提升营收与客户复用率。</li>
                                 <li>主导多个 0→1 产品，如触达平台、外呼系统、数据中台等。</li>
                                 <li>打造行为留痕、流程透明与数据驱动的运营体系。</li>
@@ -580,7 +631,7 @@
                         <div
                             class="bg-card-bg p-6 md:p-8 rounded-xl border border-white/5 hover:border-white/20 transition-all hover:bg-[#111]">
                             <div class="flex flex-wrap justify-between items-baseline mb-4">
-                                <h3 class="text-xl font-bold text-white">高级产品经理</h3>
+                                <h3 class="text-xl md:text-2xl font-bold text-white">高级产品经理</h3>
                                 <span class="text-sm text-text-muted">原始空气 (北京) 科技有限公司</span>
                             </div>
                             <div class="flex flex-wrap gap-2 mb-6">
@@ -591,7 +642,8 @@
                                 <span
                                     class="text-xs border border-white/10 bg-white/5 px-2 py-1 rounded text-gray-300">用户增长</span>
                             </div>
-                            <ul class="list-disc list-outside ml-4 space-y-3 text-sm text-gray-400 leading-relaxed">
+                            <ul
+                                class="list-disc list-outside ml-4 space-y-3 text-sm md:text-base text-gray-400 leading-relaxed">
                                 <li>设计差异化交易体验、资产管理与项目运营流程。</li>
                                 <li>支持 63+ 上线项目，全流程运营工具系统化。</li>
                                 <li>用户量突破 10 万，单日交易额峰值达 <strong class="text-white">63.74 亿</strong>。</li>
@@ -615,7 +667,7 @@
                         <div
                             class="bg-card-bg p-6 md:p-8 rounded-xl border border-white/5 hover:border-white/20 transition-all opacity-80 group-hover:opacity-100">
                             <div class="flex flex-wrap justify-between items-baseline mb-4">
-                                <h3 class="text-xl font-bold text-white">产品经理</h3>
+                                <h3 class="text-xl md:text-2xl font-bold text-white">产品经理</h3>
                                 <span class="text-sm text-text-muted">上海绿岸科技有限公司</span>
                             </div>
                             <div class="flex flex-wrap gap-2 mb-6">
@@ -624,7 +676,8 @@
                                 <span
                                     class="text-xs border border-white/10 bg-white/5 px-2 py-1 rounded text-gray-300">数据监控</span>
                             </div>
-                            <ul class="list-disc list-outside ml-4 space-y-3 text-sm text-gray-400 leading-relaxed">
+                            <ul
+                                class="list-disc list-outside ml-4 space-y-3 text-sm md:text-base text-gray-400 leading-relaxed">
                                 <li>搭建测试平台、配置系统与运营工具。</li>
                                 <li>多轮测试覆盖用户 1.8 万+，首充转化率达 21%。</li>
                                 <li>用户留存提升 13%，显著增强活跃度。</li>
@@ -666,12 +719,12 @@
     <!-- SECTION 4: CONTACT (联系我) -->
     <section id="contact" class="min-h-screen flex flex-col justify-center bg-[#050505] border-t border-border-light">
         <div class="max-w-4xl mx-auto text-center px-6 w-full reveal">
-            <h2 class="text-4xl md:text-6xl font-bold text-white mb-10 leading-tight">
+            <h2 class="text-3xl md:text-5xl font-bold text-white mb-10 leading-tight tracking-tight">
                 让我们一起打造<br>
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-white">下一个高潜力的产品</span>。
             </h2>
 
-            <p class="text-xl text-text-muted mb-16 font-light max-w-2xl mx-auto">
+            <p class="text-lg md:text-xl text-gray-400 mb-16 font-light max-w-2xl mx-auto leading-relaxed">
                 正在寻求平台型产品、数据产品、商业化方向的机会，<br class="hidden md:block">
                 欢迎交流更多项目细节。
             </p>
@@ -687,7 +740,7 @@
                 </a>
             </div>
 
-            <footer class="mt-32 text-xs text-gray-600 border-t border-white/5 pt-8">
+            <footer class="mt-32 text-xs leading-normal text-gray-500 border-t border-white/5 pt-8">
                 <p>&copy; 2025 Sun Hongtao. Built with Product Thinking & Minimalism.</p>
             </footer>
         </div>
